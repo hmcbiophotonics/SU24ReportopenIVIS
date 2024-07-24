@@ -1,7 +1,7 @@
 project:
   type: book
 book:
-  title: "Quarto Template Report"
+  title: "OpenIVIS Quarto Report"
   author:
     - name: Hailey Knolton
       email: hknolton@g.hmc.edu
