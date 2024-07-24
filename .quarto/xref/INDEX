@@ -1,0 +1,28 @@
+{
+  "index.qmd": {
+    "index.html": "21218115"
+  },
+  "sections/abstract/abstract.qmd": {
+    "index.html": "0ca23756",
+    "index": "811ae24e"
+  },
+  "sections/introduction/introduction.qmd": {
+    "index.html": "5aabbee3",
+    "index": "10674482"
+  },
+  "sections/methods/methods.qmd": {
+    "index.html": "5976525c",
+    "index": "28455500"
+  },
+  "sections/results/results.qmd": {
+    "results.html": "28dd3e3b"
+  },
+  "sections/conclusion/conclusion.qmd": {
+    "index.html": "bf88c523",
+    "index": "071fdaff"
+  },
+  "sections/acknowledgements/acknowledgements.qmd": {
+    "index.html": "752d7650",
+    "index": "6b7328af"
+  }
+}
