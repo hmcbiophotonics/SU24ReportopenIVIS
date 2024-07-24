@@ -243,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="create-sample-dataset"><span class="header-section-number">5.4.1</span> Create sample dataset</h3>
 <p>For example, let’s consider a toy example. First, we’ll create and save a data set. In your case, you’ll likely skip this step since you’ll likely have a dataset from elsewhere to use.</p>
 <p>First, let’s create a Python code block to create some random data.</p>
-<div id="bf0def4c" class="cell" data-execution_count="1">
+<div id="6ff91215" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">100</span> <span class="co"># Set number of data points</span></span>
@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">5</span><span class="op">*</span>x <span class="op">+</span> np.random.rand(N)      <span class="co"># Generate linear data with simulated noise</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, let’s save this data in our <code>/data/</code> subfolder. You can choose various formats, but one convenient option is to save the data in a <code>.mat</code> file. This way it can be opened and processed in Matlab as well as Python. It also allows you to nicely structure the data and will make the loading and plotting code we develop Matlab compatible.</p>
-<div id="f199f6c8" class="cell" data-execution_count="2">
+<div id="692739b0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.io <span class="im">as</span> sio  <span class="co"># Load Scipy IO module which has the function to save and load .mat files</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data_to_save <span class="op">=</span> {<span class="st">'x'</span>: x, <span class="st">'y'</span>: y} <span class="co"># Create dictionary to story the data</span></span>
@@ -262,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-and-plot-data" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="load-and-plot-data"><span class="header-section-number">5.4.2</span> Load and Plot Data</h3>
 <p>First let’s load the data from the <code>.mat</code> file.</p>
-<div id="992060d5" class="cell" data-execution_count="3">
+<div id="68e4268b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data_load <span class="op">=</span> sio.loadmat(<span class="st">'data/test_data.mat'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, let’s plot it.</p>
@@ -279,7 +279,7 @@ Warning
 <p>Note carefully that because of how <code>savemat()</code> works, we need to index into the <strong>zeroth element</strong> of the dictionary values in order to get to the data we want.</p>
 </div>
 </div>
-<div id="73ab4b73" class="cell" data-execution_count="4">
+<div id="2480e8e9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
@@ -303,7 +303,7 @@ Warning
 <section id="save-and-plot-images-of-figures" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="save-and-plot-images-of-figures"><span class="header-section-number">5.4.3</span> Save and Plot Images of Figures</h3>
 <p>We can even go ahead and save the plots as images if we want to have the flexiblity to include them elsewhere.</p>
-<div id="3a2217b4" class="cell" data-execution_count="5">
+<div id="2babe4d7" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'images/test_data_plot.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then we can directly display as a Quarto figure as usual.</p>
