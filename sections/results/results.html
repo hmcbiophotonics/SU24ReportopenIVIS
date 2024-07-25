@@ -284,7 +284,7 @@ div.csl-indent {
 <p>Using the process described in Section 3.3.3, analysis on simulated speckle images and the effect of filtering was run. Fig. # depicts the simulated results for a filter with cutoff frequency of N4, where N denotes the size of the speckle image in pixels, while Figures # and # show the results for cutoff frequency of N8 and N16, respectively.</p>
 <section id="create-a-simulated-speckle-image" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-simulated-speckle-image">Create a Simulated Speckle Image</h4>
-<div id="485d98b6" class="cell" data-execution_count="1">
+<div id="589cf2bf" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -315,7 +315,7 @@ div.csl-indent {
 </section>
 <section id="create-a-filter-and-apply-it-to-the-speckle-image" class="level4" data-number="5.3.1.1">
 <h4 data-number="5.3.1.1" class="anchored" data-anchor-id="create-a-filter-and-apply-it-to-the-speckle-image"><span class="header-section-number">5.3.1.1</span> Create a filter and Apply it to the Speckle Image</h4>
-<div id="186f48b0" class="cell" data-execution_count="2">
+<div id="d2634521" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute amplitude, phase and intensity of the original speckle pattern</span></span>
@@ -349,7 +349,7 @@ div.csl-indent {
 </section>
 <section id="compute-the-autocorrelation-and-speckle-size" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="compute-the-autocorrelation-and-speckle-size">Compute the Autocorrelation and Speckle Size</h4>
-<div id="824eebec" class="cell" data-execution_count="3">
+<div id="dbdeb58a" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute autocorrelation of the original and filtered speckle patterns</span></span>
@@ -419,14 +419,14 @@ div.csl-indent {
 <span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>autoZoom_fil <span class="op">=</span> autocorrelation_filtered[zoomRegion_fil]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Original speckle size (width at half maximum): 254 pixels
+<pre><code>Original speckle size (width at half maximum): 253 pixels
 Filtered speckle size (width at half maximum): 1 pixels</code></pre>
 </div>
 </div>
 </section>
 <section id="create-plots" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-plots">Create plots</h4>
-<div id="24c88c39" class="cell" data-execution_count="4">
+<div id="f29bbb40" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_colorbar(him, ax, cbar_title<span class="op">=</span><span class="st">""</span>):</span>
