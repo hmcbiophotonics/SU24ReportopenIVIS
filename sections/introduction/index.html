@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -202,7 +231,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="laser-speckle-contrast-imaging" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="laser-speckle-contrast-imaging"><span class="header-section-number">3.3</span> 1.3 Laser Speckle Contrast Imaging</h2>
 <p>Laser Speckle Contrast Imaging (LSCI) is an optical imaging technique used to track movement, such as blood flow, by visualizing blur. When a diffuse object is illuminated with coherent light, it produces scattered light waves which can be visualized as a random interference pattern called a speckle image [Boas]. In order to determine the size of the speckles in the speckle pattern, autocorrelation can be applied to the image. Autocorrelation compares the intensity of the speckle pattern at two different points by multiplying values across the entire image. The autocorrelation can also be found by taking the fourier transform of the images intensity distribution [Wikipedia]. Eq. 1 shows a speckle pattern’s autocorrelation calculation by taking the Fast Fourier Transform of the image’s intensity I(x,y). The transform is then multiplied by its complex conjugate, noted by the asterisk, in the fourier domain to obtain Fcc in Eq. 2. Finally, the inverse fourier transform returns the calculation to the spatial domain, resulting in the autocorrelation FA as shown in Eq. 3. Given the autocorrelation of a speckle image, the size of the speckle in pixels can be determined by finding the width of the autcorrelation’s peak at half of its maximum, often referred to as the full width half max (FWHM). Most speckle images have a speckle size of one to two pixels.</p>
-<p>Ffft(f) = FFT{I(x,y)} Eq. 1 Fcc(f) =Ffft(f)Ffft*(f) Eq. 2 FA(t) = IFFT{Fcc(f)} Eq. 3</p>
+<p><span class="math display">\[
+Ffft(f) = FFT{I(x,y)}                    Eq. 1
+\]</span></p>
+<p>Fcc(f) =Ffft(f)Ffft*(f) Eq. 2 FA(t) = IFFT{Fcc(f)} Eq. 3</p>
 <p>Static speckle images have high contrast patterns but when movement is imaged, the fluctuations in intensity can cause the contrast between neighboring speckles to decrease. The speckle contrast, K, can be derived as the standard deviation of pixel intensity over the mean pixel intensity, as shown in Eq. 4. Moving objects, such as blood flowing in a vein, causes the speckle pattern to shift, or decorrelate [Briers]. When this occurs, the intensity of neighboring speckles will become more similar, decreasing their contrast value.</p>
 <p>K = <i> Eq. 4</i></p><i>
 <p>In order to compute the contrast of a full speckle image, a small window is applied to the original speckle pattern, typically 5x5 or 7x7 pixels large. This window, often referred to as a “neighborhood” is run over the entire image, computing the speckle contrast K for the intensities at each location before shifting over by 1 pixel at a time. The image is then reconstructed using the respective K values in order to produce a laser speckle contrast image. A speckle image is shown in Fig. #a, and its corresponding LSCI reproduction is shown in Fig. #b. By comparing the contrast patterns between different speckle images over time, the velocity of the movement being imaged can be determined.</p>
