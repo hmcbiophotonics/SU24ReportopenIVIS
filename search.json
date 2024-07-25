@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "OpenIVIS Summer 2024 Report",
     "section": "",
-    "text": "Table of Contents\n\nAbstract\nIntroduction 3.1 In Vivo Imaging Systems 3.2 Fluorescence Imaging 3.3 Laser Speckle Contrast Imaging\nMethods 4.1 Physical Construction 4.2 Electrical Components and Software 4.3 Experiments 4.3.1 Verification 4.3.2 FITC 4.3.3 LSCI\nResults 5.1 In Vivo Imaging Systems 5.2 Fluorescence Imaging 5.3 Laser Speckle Contrast Imaging\nConclusion\nAcknowledgements",
+    "text": "Table of Contents\n\nIndex\nAbstract\nIntroduction 3.1 In Vivo Imaging Systems\nMethods\nResults\nConclusion\nAcknowledgements",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>OpenIVIS Summer 2024 Quarto Report</span>"
     ]
@@ -14,7 +14,7 @@
     "href": "sections/abstract/index.html",
     "title": "2  Abstract",
     "section": "",
-    "text": "3 Abstract\nThis paper presents the continuation of the design of an open source, inexpensive, and modular In Vivo Imaging System (IVIS) from the Harvey Mudd Biophotonics Lab during the summer of 2024. The authors contributions include the implementation of fluorescence imaging and laser speckle imaging on an improved physical system design. The system was created using widely available materials and tools including acrylic, a laser cutter, a 3D printer, and a Raspberry Pi computer. The experiments done to verify fluorescence imaging resulted in the expected relationship between fluorescence and fluorescent dye concentrations with a set exposure time of 0.1 seconds. The experiments done to implement and verify laser speckle imaging have assisted in the development of its abilities as an IVIS imaging method, but need further work to provide accurate results. The results from the experiments demonstrate the improved capabilities of the new IVIS system and pathways for future developments.",
+    "text": "This paper presents the continuation of the design of an open source, inexpensive, and modular In Vivo Imaging System (IVIS) from the Harvey Mudd Biophotonics Lab during the summer of 2024. The authors contributions include the implementation of fluorescence imaging and laser speckle imaging on an improved physical system design. The system was created using widely available materials and tools including acrylic, a laser cutter, a 3D printer, and a Raspberry Pi computer. The experiments done to verify fluorescence imaging resulted in the expected relationship between fluorescence and fluorescent dye concentrations with a set exposure time of 0.1 seconds. The experiments done to implement and verify laser speckle imaging have assisted in the development of its abilities as an IVIS imaging method, but need further work to provide accurate results. The results from the experiments demonstrate the improved capabilities of the new IVIS system and pathways for future developments.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Abstract</span>"
     ]
@@ -24,17 +24,7 @@
     "href": "sections/introduction/index.html",
     "title": "3  Introduction",
     "section": "",
-    "text": "4 Introduction",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
-    ]
-  },
-  {
-    "objectID": "sections/introduction/index.html#in-vivo-imaging-systems",
-    "href": "sections/introduction/index.html#in-vivo-imaging-systems",
-    "title": "3  Introduction",
-    "section": "4.1 In Vivo Imaging Systems",
-    "text": "4.1 In Vivo Imaging Systems\nIn Vivo Imaging Systems (IVIS) are optical imaging devices used in scientific research to create 2D and 3D representations of biological organisms and processes non-invasively. These systems use advanced imaging techniques, such as bioluminescence and fluorescence imaging, to visualize and track various biological activities within an organism over time. This approach to optical imaging can assist in drug development, understanding disease behaviors, or other biological processes in their natural context [Refaat]. Most IVIS Imaging methods implement optics in order to extract information about a subject based on the optical properties of the subject and the technique being applied. Many commercial IVIS systems can provide additional capabilities such as X-Ray, temperature control, computed tomography (CT), or accessories [KU, Revvity]\nWhile IVIS systems are able to create detailed images over a broad range of applications, they can be limiting due to their inaccessibility. IVIS systems tend to cost upwards of $100,000, which may bar smaller or less-funded research institutions from purchasing their own system [bostonind]. Renting the use of an IVIS system is typically in the hundreds of dollars range as well, which further restricts the accessibility of in vivo imaging [OSU]. In addition to being high-cost, commercial IVIS systems are also restricted to the imaging applications they’ve been developed for with little room for customization or modularity [Source?].\nThe goal of the OpenIVIS project is to create a low-cost, open source and modular version of an IVIS system for biological imaging. Free open-source software (FOSS), free open-source hardware (FOSH) and the increased accessibility of rapid prototyping techniques, such as 3-dimensional (3D) printing, would allow for any institution to implement a version of this system in their research. An IVIS system with a modular design would also permit users to replace the imaging techniques used in order to best advance their work. Additionally, this would pave the way for implementation of in-vivo imaging techniques not currently available in most commercial systems such as Laser Speckle Contrast Imaging (LSCI). SHOULD maybe reference previous work on this, especially the CSM/HMC paper.",
+    "text": "3.1 In Vivo Imaging Systems\nIn Vivo Imaging Systems (IVIS) are optical imaging devices used in scientific research to create 2D and 3D representations of biological organisms and processes non-invasively. These systems use advanced imaging techniques, such as bioluminescence and fluorescence imaging, to visualize and track various biological activities within an organism over time. This approach to optical imaging can assist in drug development, understanding disease behaviors, or other biological processes in their natural context [Refaat]. Most IVIS Imaging methods implement optics in order to extract information about a subject based on the optical properties of the subject and the technique being applied. Many commercial IVIS systems can provide additional capabilities such as X-Ray, temperature control, computed tomography (CT), or accessories [KU, Revvity]\nWhile IVIS systems are able to create detailed images over a broad range of applications, they can be limiting due to their inaccessibility. IVIS systems tend to cost upwards of $100,000, which may bar smaller or less-funded research institutions from purchasing their own system [bostonind]. Renting the use of an IVIS system is typically in the hundreds of dollars range as well, which further restricts the accessibility of in vivo imaging [OSU]. In addition to being high-cost, commercial IVIS systems are also restricted to the imaging applications they’ve been developed for with little room for customization or modularity [Source?].\nThe goal of the OpenIVIS project is to create a low-cost, open source and modular version of an IVIS system for biological imaging. Free open-source software (FOSS), free open-source hardware (FOSH) and the increased accessibility of rapid prototyping techniques, such as 3-dimensional (3D) printing, would allow for any institution to implement a version of this system in their research. An IVIS system with a modular design would also permit users to replace the imaging techniques used in order to best advance their work. Additionally, this would pave the way for implementation of in-vivo imaging techniques not currently available in most commercial systems such as Laser Speckle Contrast Imaging (LSCI). SHOULD maybe reference previous work on this, especially the CSM/HMC paper.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -43,8 +33,8 @@
     "objectID": "sections/introduction/index.html#fluorescence-imaging",
     "href": "sections/introduction/index.html#fluorescence-imaging",
     "title": "3  Introduction",
-    "section": "4.2 Fluorescence Imaging",
-    "text": "4.2 Fluorescence Imaging\nOne of the most common capabilities of IVIS systems is fluorescence imaging. Fluorescence is a highly sensitive analytical tool that is used to measure extremely low concentrations of a compound in a solution [Williams]. The Jablonski diagram shown in Fig. # depicts the fluorescent process. When light is absorbed by a compound, molecules of that compound will become excited and raise to a higher energy level. Fluorescent compounds usually contain conjugated double bonds, where a certain number of electrons have greater mobility than the other electrons in the molecule [Williams]. This greater mobility allows for more molecules to become excited when the light is absorbed. When these molecules return to their ground state, some of the energy is emitted as fluorescence.\nThe energy that makes up light are called photons. Photons that absorb and excite molecules hold a certain amount of energy that determines their wavelength, or color [Saleh]. When a molecule emits a photon as it returns to ground state, the energy in the photon that is emitted is less than in the photon that was excited. This means that the resulting photon will have a longer wavelength and a different color [Saleh].\nIn order to image fluorescence, the absorbed and emitted photons of light must be controlled based on their wavelength spectrums. The excitation wavelength spectrum and the emission wavelength spectrum can often overlap, allowing the camera to capture photons of both wavelengths. An example of these spectrums is shown in Fig. #. In order to see the fluorescence of a compound, only the emitted light must be captured by the camera. Implementing an optical filter can help to control what wavelengths are captured. Optical filters allow for wavelengths of a certain range to be the only wavelengths detected by a camera by filtering out other wavelengths Fluorescence imaging has a variety of applications including medical imaging, environmental monitoring, and biological research. A common application of fluorescence is to non-invasively analyze biological molecules in vivo. Most IVIS systems use fluorescence for this purpose, and OpenIVIS will also demonstrate this fluorescence capability.",
+    "section": "3.2 Fluorescence Imaging",
+    "text": "3.2 Fluorescence Imaging\nOne of the most common capabilities of IVIS systems is fluorescence imaging. Fluorescence is a highly sensitive analytical tool that is used to measure extremely low concentrations of a compound in a solution [Williams]. The Jablonski diagram shown in Fig. # depicts the fluorescent process. When light is absorbed by a compound, molecules of that compound will become excited and raise to a higher energy level. Fluorescent compounds usually contain conjugated double bonds, where a certain number of electrons have greater mobility than the other electrons in the molecule [Williams]. This greater mobility allows for more molecules to become excited when the light is absorbed. When these molecules return to their ground state, some of the energy is emitted as fluorescence.\nThe energy that makes up light are called photons. Photons that absorb and excite molecules hold a certain amount of energy that determines their wavelength, or color [Saleh]. When a molecule emits a photon as it returns to ground state, the energy in the photon that is emitted is less than in the photon that was excited. This means that the resulting photon will have a longer wavelength and a different color [Saleh].\nIn order to image fluorescence, the absorbed and emitted photons of light must be controlled based on their wavelength spectrums. The excitation wavelength spectrum and the emission wavelength spectrum can often overlap, allowing the camera to capture photons of both wavelengths. An example of these spectrums is shown in Fig. #. In order to see the fluorescence of a compound, only the emitted light must be captured by the camera. Implementing an optical filter can help to control what wavelengths are captured. Optical filters allow for wavelengths of a certain range to be the only wavelengths detected by a camera by filtering out other wavelengths Fluorescence imaging has a variety of applications including medical imaging, environmental monitoring, and biological research. A common application of fluorescence is to non-invasively analyze biological molecules in vivo. Most IVIS systems use fluorescence for this purpose, and OpenIVIS will also demonstrate this fluorescence capability.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -53,8 +43,8 @@
     "objectID": "sections/introduction/index.html#laser-speckle-contrast-imaging",
     "href": "sections/introduction/index.html#laser-speckle-contrast-imaging",
     "title": "3  Introduction",
-    "section": "4.3 2.3 Laser Speckle Contrast Imaging",
-    "text": "4.3 2.3 Laser Speckle Contrast Imaging\nLaser Speckle Contrast Imaging (LSCI) is an optical imaging technique used to track movement, such as blood flow, by visualizing blur. When a diffuse object is illuminated with coherent light, it produces scattered light waves which can be visualized as a random interference pattern called a speckle image [Boas]. In order to determine the size of the speckles in the speckle pattern, autocorrelation can be applied to the image. Autocorrelation compares the intensity of the speckle pattern at two different points by multiplying values across the entire image. The autocorrelation can also be found by taking the fourier transform of the images intensity distribution [Wikipedia]. Eq. 1 shows a speckle pattern’s autocorrelation calculation by taking the Fast Fourier Transform of the image’s intensity I(x,y). The transform is then multiplied by its complex conjugate, noted by the asterisk, in the fourier domain to obtain Fcc in Eq. 2. Finally, the inverse fourier transform returns the calculation to the spatial domain, resulting in the autocorrelation FA as shown in Eq. 3. Given the autocorrelation of a speckle image, the size of the speckle in pixels can be determined by finding the width of the autcorrelation’s peak at half of its maximum, often referred to as the full width half max (FWHM). Most speckle images have a speckle size of one to two pixels.\n\\(F_{fft}(f) = FFT\\{I(x,y)\\}\\) & \\ \\(F_{cc}(f) = F_{fft}(f)\\times F_{fft}^{*}(f)\\) & \\ \\(F_{A}(t) = IFFT\\{F_{cc}(f)\\}\\) & \\\nStatic speckle images have high contrast patterns but when movement is imaged, the fluctuations in intensity can cause the contrast between neighboring speckles to decrease. The speckle contrast, K, can be derived as the standard deviation of pixel intensity over the mean pixel intensity, as shown in Eq. 4. Moving objects, such as blood flowing in a vein, causes the speckle pattern to shift, or decorrelate [Briers]. When this occurs, the intensity of neighboring speckles will become more similar, decreasing their contrast value.\n$& \\(K = \\frac{\\sigma }{&lt;I&gt;}\\) & \nIn order to compute the contrast of a full speckle image, a small window is applied to the original speckle pattern, typically 5x5 or 7x7 pixels large. This window, often referred to as a “neighborhood” is run over the entire image, computing the speckle contrast K for the intensities at each location before shifting over by 1 pixel at a time. The image is then reconstructed using the respective K values in order to produce a laser speckle contrast image. A speckle image is shown in Fig. #a, and its corresponding LSCI reproduction is shown in Fig. #b. By comparing the contrast patterns between different speckle images over time, the velocity of the movement being imaged can be determined.",
+    "section": "3.3 Laser Speckle Contrast Imaging",
+    "text": "3.3 Laser Speckle Contrast Imaging\nLaser Speckle Contrast Imaging (LSCI) is an optical imaging technique used to track movement, such as blood flow, by visualizing blur. When a diffuse object is illuminated with coherent light, it produces scattered light waves which can be visualized as a random interference pattern called a speckle image [Boas]. In order to determine the size of the speckles in the speckle pattern, autocorrelation can be applied to the image. Autocorrelation compares the intensity of the speckle pattern at two different points by multiplying values across the entire image. The autocorrelation can also be found by taking the fourier transform of the images intensity distribution [Wikipedia]. Eq. 1 shows a speckle pattern’s autocorrelation calculation by taking the Fast Fourier Transform of the image’s intensity I(x,y). The transform is then multiplied by its complex conjugate, noted by the asterisk, in the fourier domain to obtain Fcc in Eq. 2. Finally, the inverse fourier transform returns the calculation to the spatial domain, resulting in the autocorrelation FA as shown in Eq. 3. Given the autocorrelation of a speckle image, the size of the speckle in pixels can be determined by finding the width of the autcorrelation’s peak at half of its maximum, often referred to as the full width half max (FWHM). Most speckle images have a speckle size of one to two pixels.\n\\[\\begin{align}\nF_{fft}(f) &= \\text{FFT}\\{I(x,y)\\} \\quad \\text{(Eq.1)} \\\\\nF_{cc}(f) &= F_{fft}(f) \\times F_{fft}^{*}(f) \\quad \\text{(Eq.2)} \\\\\nF_{A}(t) &= \\text{IFFT}\\{F_{cc}(f)\\} \\quad \\text{(Eq.3)}\n\\end{align}\\]\nStatic speckle images have high contrast patterns but when movement is imaged, the fluctuations in intensity can cause the contrast between neighboring speckles to decrease. The speckle contrast, K, can be derived as the standard deviation of pixel intensity over the mean pixel intensity, as shown in Eq. 4. Moving objects, such as blood flowing in a vein, causes the speckle pattern to shift, or decorrelate [Briers]. When this occurs, the intensity of neighboring speckles will become more similar, decreasing their contrast value.\n\\[\\begin{align}\nK = \\frac{\\sigma }{&lt;I&gt;} \\quad \\text{(Eq.4)}\n\\end{align}\\]\nIn order to compute the contrast of a full speckle image, a small window is applied to the original speckle pattern, typically 5x5 or 7x7 pixels large. This window, often referred to as a “neighborhood” is run over the entire image, computing the speckle contrast K for the intensities at each location before shifting over by 1 pixel at a time. The image is then reconstructed using the respective K values in order to produce a laser speckle contrast image. A speckle image is shown in Fig. #a, and its corresponding LSCI reproduction is shown in Fig. #b. By comparing the contrast patterns between different speckle images over time, the velocity of the movement being imaged can be determined.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -62,111 +52,91 @@
   {
     "objectID": "sections/methods/index.html",
     "href": "sections/methods/index.html",
-    "title": "4  3. Methods",
+    "title": "4  Methods",
     "section": "",
-    "text": "5 3 Methods",
+    "text": "4.1 Physical Construction\nThe OpenIVIS box is made out of laser cut acrylic and 3D printed parts. Black acrylic was cut to form the base, back, and sides of the box. The acrylic pieces have extruding parts along their rims to connect in a jigsaw puzzle configuration. This ensures that no light can leak out of the box and that the box is stable. The front of the box is made from a 3D printed PLA filament and has long notches to allow for the black acrylic door to slide up and down. Fig. # shows the fully assembled box.\nThe box has two replaceable lids for the different imaging methods.The first lid is designed for laser speckle contrast imaging. The lid is made out of black acrylic with three holes cut into it. One hole holds the camera while the other two holes hold the laser diode configuration described in Section 2.2. Fig. # shows the assembly used for LSCI.\nThe second lid is designed for fluorescence imaging. It has an upper layer of black acrylic jigsaw pieces. On the underside of the lid is a 3D printed ring to hold an array of Neopixel LEDs. Beneath the LED array is a diffusion plate made of white acrylic to allow for the LEDs to shine through and into the box. A 3D printed camera holder is secured to the white acrylic and has space for a 3D printed optical filter holder to slide in beneath the camera. Fig. # shows the fully assembled fluorescence top. This configuration can also be used for other imaging methods that implement the Neopixel LED array, as discussed in Section 2.3.4.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
-    ]
-  },
-  {
-    "objectID": "sections/methods/index.html#physical-construction",
-    "href": "sections/methods/index.html#physical-construction",
-    "title": "4  3. Methods",
-    "section": "5.1 3.1 Physical Construction",
-    "text": "5.1 3.1 Physical Construction",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
     ]
   },
   {
     "objectID": "sections/methods/index.html#electrical-components-and-software",
     "href": "sections/methods/index.html#electrical-components-and-software",
-    "title": "4  3. Methods",
-    "section": "5.2 3.2 Electrical Components and Software",
-    "text": "5.2 3.2 Electrical Components and Software",
+    "title": "4  Methods",
+    "section": "4.2 Electrical Components and Software",
+    "text": "4.2 Electrical Components and Software\nThe OpenIVIS system runs primarily off of a Raspberry Pi 4, and other cheap, off-the-shelf electronics. The Raspberry Pi is a series of small single-board computers developed to be an educational tool, which has many interfacing options such as general purpose input/output pins (GPIO) that can connect to sensors. The camera used for all images in this project is an Arducam IMX519 color camera with a 24” flex cable, which is Raspberry Pi compatible and has autofocus features. A desktop and mouse are connected to the USB interfaces of the Raspberry Pi in order to use the system and make any necessary alterations. The system is stored on a 128 GB microSD card with the appropriate Raspberry Pi operating system.\nFor most imaging methods used by the OpenIVIS system, an LED array of Adafruit Neopixel RGB LED modules is used to illuminate subjects under study. In order to connect to the Raspberry Pi, a Raspberry Pi prototyping board is wired along with a logic level converter and terminal block as shown in Fig. #, as well as powered by an external 5V power supply. The LED array is connected to the pulse width modulated (PWM) pin from the Raspberry Pi to provide control. The LED’s are affixed to the 3D printed LED array as described in section 2.1. Unmounted, 25 mm thick long-pass optical glass filters were sourced from Thorlabs in cutoff wavelengths of 515 nm, 570 nm, 665 nm and 695 nm.\nLSCI and other laser based imaging techniques implement a red ThorLabs 635 nm Collimated Laser Diode Module, along with Thorlabs’ RA90, SM1TC, SM1D12D, GBE05-A, LDS5, TR3, TR6, CPS635R, SM1S10, SM1T1 and AD11F to properly configure the laser beam. The laser configuration as shown in Fig. #a is affixed to the lid of the OpenIVIS box using a 3/8” 1/4-20 bolt, as shown in Fig. #b.\nThe majority of the code used to run the OpenIVIS system is written in the programming language Python, and available in the project’s public GitHub repository [Git]. Descriptions of the Python scripts necessary to collect and process data are described in the repository’s “Read Me” file. The list of necessary Python Packages is listed in Appendix #, and is run on the Raspberry Pi through a virtual environment. The Neopixel LED array and Arducam camera Python libraries are also used and require installation. Additional data processing code was written using Mathworks’ MatLab software.\nA full list of materials, diagrams, and relevant code is available in Appendix #, Appendix # and Appendix #, respectively.\nFigs to make: LED wiring, Laser configuration, + Appendix BOM and any extra diagrams?",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
     ]
   },
   {
     "objectID": "sections/methods/index.html#experiments",
     "href": "sections/methods/index.html#experiments",
-    "title": "4  3. Methods",
-    "section": "5.3 3.3 Experiments",
-    "text": "5.3 3.3 Experiments\n\n5.3.1 3.3.1 Verification\n\n\n5.3.2 3.3.2 FITC\n\n\n5.3.3 3.3.3 LSCI",
+    "title": "4  Methods",
+    "section": "4.3 Experiments",
+    "text": "4.3 Experiments\n\n4.3.1 Verification\nBefore fluorescence and laser speckle contrast imaging, it was necessary to verify that the Arducam camera and the LED lights were working properly. The Neopixel Python library allows for brightness control in two forms. The first is through changing the brightness level of the LED output, which can be set to any value between 0 and 1 arbitrary units. In addition to brightness level, the usage of 4 valued color codes allow for the user to change both the color of the LED output and the brightness of each color. The red, green, blue and white brightness values range from 0 to 255 arbitrary units.\nBrightness level and exposure time verification can be done by changing the exposure time of the camera while keeping the brightness constant and by changing the brightness level of the LEDs while keeping the exposure time constant. The exposure time, or shutter speed, controls how long the camera is exposed to light when taking an image, and it is controlled using picamera2 settings. The brightness level of the LEDs is controlled using the NeoPixel library settings. Images were taken at full brightness and varying exposure times of 0.001, 0.005, 0.01, 0.05, and 0.1 seconds. Images were also taken at exposure times of 0.01 and 0.1 seconds with varying brightness levels from 0 to 1 arbitrary units. These settings for these images were then compared to the intensities of the pixels in the images.\nThe pixel intensities were measured by taking a three by three set of pixels near the center of the image and putting them in an excel spreadsheet. To plot the data a MATLAB script was used to read in the intensity values and average across each set of nine. These averaged values were then averaged across five different trials of varying the brightness level and exposure time. The expected results are positive trends between exposure time and pixel intensity and brightness level and pixel intensity.\nSince the above process will only verify the LEDs based on what the camera is detecting from the LED light, it was also necessary to test the actual LED output using a photodiode. The photodiode outputs wattage values based on the intensity of light detected. Changing both the brightness levels from the NeoPixel settings and the color code values of the red, green, blue, and white LEDs should result in positive trends between brightness value and output wattage. The photodiode was placed inside of the system’s main box compartment with the sensor facing upward. Data was collected for three different sensor locations in the box. For each location, a Python script was used to cycle through the Neopixel brightness levels from 0 to 1, increasing by 0.1 each time to achieve 11 equally distributed brightness levels. For each brightness level, the color code tuples were also cycled from 0 to 255 for each LED color. The color code values increased by 26 a.u. each cycle to achieve 11 equality distributed values. The LED output in nW was saved in a spreadsheet for each setting, resulting in XXX values for each photodiode sensor location. The trends in the white LED output were analyzed for changes in brightness level at a constant color code of 255 a.u., and the changes in color code for a constant brightness level of 1. For each setting, the average wattage and standard deviation was taken across the three trials and inputted into a MatLab script that created graphs of those values across changes in Neopixel setting.\n\n\n4.3.2 FITC\nTo test the fluorescence capabilities of OpenIVIS, ten concentrations of the commonly used fluorescent dye, Fluorescein isothiocyanate (FITC), were diluted in ethanol. FITC emits fluorescence of wavelengths ranging in the green spectrum with a peak around 530 nm [ThermoFisher]. To excite the FITC solutions, blue LEDs were used to illuminate the dye at full brightness. The Neopixel blue spectrum has a peak approximately 450 nm. To prevent the camera from detecting the excitation light, a 515 nm long pass optical filter was placed in front of the camera. The filter blocked out all wavelengths lower than 515 nm, including the blue excitation light. The ten different concentrations of FITC ranged from 10-3 M to 10-12 M. In a 96-well PCR plate, 2 wells of each FITC concentration were placed in a four by five orientation and put into the OpenIVIS box for imaging.\nTo quantify the fluorescence of each FITC concentration, the raw image data from the captured images was converted into Bayer images. The Bayer images have a red, green, green, blue (RGGB) color filter array as shown in Fig. #. In this color filter array there is only one color component in each pixel of the image [Lee]. The other two color components for the pixel must be interpolated from information gathered from its neighboring pixels [Lee]. After getting the Bayer images, the first green channel was isolated so that the images have empty and filled values ranging from 0 to 1023 arbitrary units. These images allow for the intensity of the pixels to be extracted and compared across multiple images. Images were taken of the FITC concentrations in a well plate with varying settings. Exposure time and brightness level were changed to see which sets of controls can best represent the trend between FITC concentration and pixel intensity. The final experiment cycled through nine different exposure times, ranging from 1 ms to 10000ms. For each exposure time, five images of the well plate were captured with a brightness level of 1. For mathematical analysis, a python script was used to save the green-channel intensities for each of the filled wells, along with two empty wells for comparison. At each well, the script took the mean intensity and standard deviation of a circle of pixels within a radius of 20 pixels, when given the corresponding center pixel location. These values were saved in an excel spreadsheet and then inputted into Matlab to find the mean and standard deviation of each concentration of FITC across five sets of images. The values were then plotted as intensity over FITC concentration in M.\n\n\n4.3.3 LSCI\nIn order to verify the analysis and LSCI computation of speckle images, a python script was used to create simulated speckle images. A simulated speckle pattern was generated using Python’s numpy library to make an NxN array of randomized, complex intensity values. Typical RGB images have intensities ranging from 0 to 255 arbitrary units. Given the simulated speckle array, a python processing script was used to calculate the phase and amplitude information of the image. Additionally, the script applied a circular, low pass filter in the fourier domain to the speckle pattern to enhance the quality of the image. An autocorrelation calculation was then applied to both the original and filtered speckle patterns using the fourier method described in Section 1.3 in order to quantify the temporal or spatial variations. Next, the speckle size was determined by finding the location in which the autocorrelation reaches the maximum of its peak on either side. The simulation was then run through a LSCI loop to calculate the K values as described in Section 1.3.\nTo take real-world speckle images for analysis, the modified box lid described in Section 2.3.2 was used. The laser module in Fig. #a was affixed to the lid of the OpenIVIS box using a 3/8” 1/4-20 bolt along with the Arducam camera, as shown in Fig. #b. In order to mimic movement that might be seen in a biological system, such as a vein with blood flow, a clear plastic tube was run through the center of the box. Diffuse liquid was pushed through the tube at varying flow rates by a kdScientific Syringe Pump and a 20 mL syringe with a Luer Lock. The area of the tube under study was placed directly under the Raspberry Pi camera and illuminated with the laser module. Images were taken using the corresponding python script and saved as .bmp files, and Bayer images as .npy arrays. Additionally, the green channel of the Bayer image were saved using a mask, as discussed in Section 2.3.2. The resulting images were processed using an additional python program to calculate the speckle size, intensity histogram and LSCI pattern.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
     ]
   },
   {
     "objectID": "sections/results/results.html",
     "href": "sections/results/results.html",
-    "title": "5  4. Results",
+    "title": "5  Results",
     "section": "",
-    "text": "6 4. Results",
+    "text": "5.1 System Verification and Setup",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
-    ]
-  },
-  {
-    "objectID": "sections/results/results.html#system-verification-and-setup",
-    "href": "sections/results/results.html#system-verification-and-setup",
-    "title": "5  4. Results",
-    "section": "6.1 4.1 System Verification and Setup",
-    "text": "6.1 4.1 System Verification and Setup",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
     ]
   },
   {
     "objectID": "sections/results/results.html#flourescence-imaging-fluorescence-imaging",
     "href": "sections/results/results.html#flourescence-imaging-fluorescence-imaging",
-    "title": "5  4. Results",
-    "section": "6.2 4.2 Flourescence Imaging {fluorescence-imaging}",
-    "text": "6.2 4.2 Flourescence Imaging {fluorescence-imaging}",
+    "title": "5  Results",
+    "section": "5.2 Flourescence Imaging {fluorescence-imaging}",
+    "text": "5.2 Flourescence Imaging {fluorescence-imaging}",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
     ]
   },
   {
     "objectID": "sections/results/results.html#laser-speckle-contrast-imaging",
     "href": "sections/results/results.html#laser-speckle-contrast-imaging",
-    "title": "5  4. Results",
-    "section": "6.3 4.3 Laser Speckle Contrast Imaging",
-    "text": "6.3 4.3 Laser Speckle Contrast Imaging",
+    "title": "5  Results",
+    "section": "5.3 Laser Speckle Contrast Imaging",
+    "text": "5.3 Laser Speckle Contrast Imaging",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
     ]
   },
   {
     "objectID": "sections/conclusion/index.html",
     "href": "sections/conclusion/index.html",
-    "title": "6  5. Conclusion",
+    "title": "6  Conclusion",
     "section": "",
-    "text": "7 5. Conclusion\nThe conclusion summaries the main results of your paper. It generally mirrors the abstract, but in slightly more detail.\nIt is also common for the conclusion to include a discussion of the data, limitations of the work, and directions for future work.",
+    "text": "7 Conclusion\nThe conclusion summaries the main results of your paper. It generally mirrors the abstract, but in slightly more detail.\nIt is also common for the conclusion to include a discussion of the data, limitations of the work, and directions for future work.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>5. Conclusion</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conclusion</span>"
     ]
   },
   {
     "objectID": "sections/acknowledgements/index.html",
     "href": "sections/acknowledgements/index.html",
-    "title": "7  6. Acknowledgments",
+    "title": "7  Acknowledgments",
     "section": "",
-    "text": "7.1 6.1 Funding Acknowledgement\nA sample acknowledgement of funding by an NSF grant might read something like the following.",
+    "text": "7.1 Funding Acknowledgement\nA sample acknowledgement of funding by an NSF grant might read something like the following.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>6. Acknowledgments</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Acknowledgments</span>"
     ]
   },
   {
     "objectID": "sections/acknowledgements/index.html#funding-acknowledgement",
     "href": "sections/acknowledgements/index.html#funding-acknowledgement",
-    "title": "7  6. Acknowledgments",
+    "title": "7  Acknowledgments",
     "section": "",
     "text": "This research was supported by the National Science Foundation under Grant No. [Your Grant Number]. The authors would like to thank [any other contributors, institutions, or facilities] for their support and collaboration. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.”",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>6. Acknowledgments</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Acknowledgments</span>"
     ]
   }
 ]
