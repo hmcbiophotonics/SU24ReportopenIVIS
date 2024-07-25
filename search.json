@@ -2,21 +2,11 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Quarto Template Report",
+    "title": "OpenIVIS Summer 2024 Report",
     "section": "",
-    "text": "File Structure\nThe suggested structure for this repository is designed to maintain clarity and keep related files together.\nTree diagram created using tree.nathanfriend.io.",
+    "text": "Table of Contents\n\nAbstract\nIntroduction 3.1 In Vivo Imaging Systems 3.2 Fluorescence Imaging 3.3 Laser Speckle Contrast Imaging\nMethods 4.1 Physical Construction 4.2 Electrical Components and Software 4.3 Experiments 4.3.1 Verification 4.3.2 FITC 4.3.3 LSCI\nResults 5.1 In Vivo Imaging Systems 5.2 Fluorescence Imaging 5.3 Laser Speckle Contrast Imaging\nConclusion\nAcknowledgements",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto Report Template</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#file-structure",
-    "href": "index.html#file-structure",
-    "title": "Quarto Template Report",
-    "section": "",
-    "text": ".\n├── _book\n├── _environment.yml\n├── _quarto.yml\n├── _site\n├── ieee.csl\n├── index.qmd\n├── references.bib\n├── sections\n│   ├── abstract\n│   │   └── abstract.qmd\n│   ├── acknowledgements\n│   │   └── acknowledgements.qmd\n│   ├── conclusion\n│   │   └── conclusion.qmd\n│   ├── introduction\n│   │   ├── images\n│   │   └── introduction.qmd\n│   ├── references\n│   └── results\n│       ├── data\n│       │   └── test_data.mat\n│       ├── images\n│       │   └── test_data_plot.png\n│       └── results.qmd\n└── styles.css",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto Report Template</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>OpenIVIS Summer 2024 Quarto Report</span>"
     ]
   },
   {
@@ -24,7 +14,7 @@
     "href": "sections/abstract/index.html",
     "title": "2  Abstract",
     "section": "",
-    "text": "This paper presents the continuation of the design of an open source, inexpensive, and modular In Vivo Imaging System (IVIS) from the Harvey Mudd Biophotonics Lab during the summer of 2024. The authors contributions include the implementation of fluorescence imaging and laser speckle imaging on an improved physical system design. The system was created using widely available materials and tools including acrylic, a laser cutter, a 3D printer, and a Raspberry Pi computer. The experiments done to verify fluorescence imaging resulted in the expected relationship between fluorescence and fluorescent dye concentrations with a set exposure time of 0.1 seconds. The experiments done to implement and verify laser speckle imaging have assisted in the development of its abilities as an IVIS imaging method, but need further work to provide accurate results. The results from the experiments demonstrate the improved capabilities of the new IVIS system and pathways for future developments.",
+    "text": "3 Abstract\nThis paper presents the continuation of the design of an open source, inexpensive, and modular In Vivo Imaging System (IVIS) from the Harvey Mudd Biophotonics Lab during the summer of 2024. The authors contributions include the implementation of fluorescence imaging and laser speckle imaging on an improved physical system design. The system was created using widely available materials and tools including acrylic, a laser cutter, a 3D printer, and a Raspberry Pi computer. The experiments done to verify fluorescence imaging resulted in the expected relationship between fluorescence and fluorescent dye concentrations with a set exposure time of 0.1 seconds. The experiments done to implement and verify laser speckle imaging have assisted in the development of its abilities as an IVIS imaging method, but need further work to provide accurate results. The results from the experiments demonstrate the improved capabilities of the new IVIS system and pathways for future developments.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Abstract</span>"
     ]
@@ -34,17 +24,27 @@
     "href": "sections/introduction/index.html",
     "title": "3  Introduction",
     "section": "",
-    "text": "3.1 1.1 In Vivo Imaging Systems\nIn Vivo Imaging Systems (IVIS) are optical imaging devices used in scientific research to create 2D and 3D representations of biological organisms and processes non-invasively. These systems use advanced imaging techniques, such as bioluminescence and fluorescence imaging, to visualize and track various biological activities within an organism over time. This approach to optical imaging can assist in drug development, understanding disease behaviors, or other biological processes in their natural context [Refaat]. Most IVIS Imaging methods implement optics in order to extract information about a subject based on the optical properties of the subject and the technique being applied. Many commercial IVIS systems can provide additional capabilities such as X-Ray, temperature control, computed tomography (CT), or accessories [KU, Revvity]\nWhile IVIS systems are able to create detailed images over a broad range of applications, they can be limiting due to their inaccessibility. IVIS systems tend to cost upwards of $100,000, which may bar smaller or less-funded research institutions from purchasing their own system [bostonind]. Renting the use of an IVIS system is typically in the hundreds of dollars range as well, which further restricts the accessibility of in vivo imaging [OSU]. In addition to being high-cost, commercial IVIS systems are also restricted to the imaging applications they’ve been developed for with little room for customization or modularity [Source?].\nThe goal of the OpenIVIS project is to create a low-cost, open source and modular version of an IVIS system for biological imaging. Free open-source software (FOSS), free open-source hardware (FOSH) and the increased accessibility of rapid prototyping techniques, such as 3-dimensional (3D) printing, would allow for any institution to implement a version of this system in their research. An IVIS system with a modular design would also permit users to replace the imaging techniques used in order to best advance their work. Additionally, this would pave the way for implementation of in-vivo imaging techniques not currently available in most commercial systems such as Laser Speckle Contrast Imaging (LSCI). SHOULD maybe reference previous work on this, especially the CSM/HMC paper.",
+    "text": "4 Introduction",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
-    "objectID": "sections/introduction/index.html#flourescence-imaging",
-    "href": "sections/introduction/index.html#flourescence-imaging",
+    "objectID": "sections/introduction/index.html#in-vivo-imaging-systems",
+    "href": "sections/introduction/index.html#in-vivo-imaging-systems",
     "title": "3  Introduction",
-    "section": "3.2 1.2 Flourescence Imaging",
-    "text": "3.2 1.2 Flourescence Imaging\nOne of the most common capabilities of IVIS systems is fluorescence imaging. Fluorescence is a highly sensitive analytical tool that is used to measure extremely low concentrations of a compound in a solution [Williams]. The Jablonski diagram shown in Fig. # depicts the fluorescent process. When light is absorbed by a compound, molecules of that compound will become excited and raise to a higher energy level. Fluorescent compounds usually contain conjugated double bonds, where a certain number of electrons have greater mobility than the other electrons in the molecule [Williams]. This greater mobility allows for more molecules to become excited when the light is absorbed. When these molecules return to their ground state, some of the energy is emitted as fluorescence.\nThe energy that makes up light are called photons. Photons that absorb and excite molecules hold a certain amount of energy that determines their wavelength, or color [Saleh]. When a molecule emits a photon as it returns to ground state, the energy in the photon that is emitted is less than in the photon that was excited. This means that the resulting photon will have a longer wavelength and a different color [Saleh].\nIn order to image fluorescence, the absorbed and emitted photons of light must be controlled based on their wavelength spectrums. The excitation wavelength spectrum and the emission wavelength spectrum can often overlap, allowing the camera to capture photons of both wavelengths. An example of these spectrums is shown in Fig. #. In order to see the fluorescence of a compound, only the emitted light must be captured by the camera. Implementing an optical filter can help to control what wavelengths are captured. Optical filters allow for wavelengths of a certain range to be the only wavelengths detected by a camera by filtering out other wavelengths Fluorescence imaging has a variety of applications including medical imaging, environmental monitoring, and biological research. A common application of fluorescence is to non-invasively analyze biological molecules in vivo. Most IVIS systems use fluorescence for this purpose, and OpenIVIS will also demonstrate this fluorescence capability.",
+    "section": "4.1 In Vivo Imaging Systems",
+    "text": "4.1 In Vivo Imaging Systems\nIn Vivo Imaging Systems (IVIS) are optical imaging devices used in scientific research to create 2D and 3D representations of biological organisms and processes non-invasively. These systems use advanced imaging techniques, such as bioluminescence and fluorescence imaging, to visualize and track various biological activities within an organism over time. This approach to optical imaging can assist in drug development, understanding disease behaviors, or other biological processes in their natural context [Refaat]. Most IVIS Imaging methods implement optics in order to extract information about a subject based on the optical properties of the subject and the technique being applied. Many commercial IVIS systems can provide additional capabilities such as X-Ray, temperature control, computed tomography (CT), or accessories [KU, Revvity]\nWhile IVIS systems are able to create detailed images over a broad range of applications, they can be limiting due to their inaccessibility. IVIS systems tend to cost upwards of $100,000, which may bar smaller or less-funded research institutions from purchasing their own system [bostonind]. Renting the use of an IVIS system is typically in the hundreds of dollars range as well, which further restricts the accessibility of in vivo imaging [OSU]. In addition to being high-cost, commercial IVIS systems are also restricted to the imaging applications they’ve been developed for with little room for customization or modularity [Source?].\nThe goal of the OpenIVIS project is to create a low-cost, open source and modular version of an IVIS system for biological imaging. Free open-source software (FOSS), free open-source hardware (FOSH) and the increased accessibility of rapid prototyping techniques, such as 3-dimensional (3D) printing, would allow for any institution to implement a version of this system in their research. An IVIS system with a modular design would also permit users to replace the imaging techniques used in order to best advance their work. Additionally, this would pave the way for implementation of in-vivo imaging techniques not currently available in most commercial systems such as Laser Speckle Contrast Imaging (LSCI). SHOULD maybe reference previous work on this, especially the CSM/HMC paper.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "sections/introduction/index.html#fluorescence-imaging",
+    "href": "sections/introduction/index.html#fluorescence-imaging",
+    "title": "3  Introduction",
+    "section": "4.2 Fluorescence Imaging",
+    "text": "4.2 Fluorescence Imaging\nOne of the most common capabilities of IVIS systems is fluorescence imaging. Fluorescence is a highly sensitive analytical tool that is used to measure extremely low concentrations of a compound in a solution [Williams]. The Jablonski diagram shown in Fig. # depicts the fluorescent process. When light is absorbed by a compound, molecules of that compound will become excited and raise to a higher energy level. Fluorescent compounds usually contain conjugated double bonds, where a certain number of electrons have greater mobility than the other electrons in the molecule [Williams]. This greater mobility allows for more molecules to become excited when the light is absorbed. When these molecules return to their ground state, some of the energy is emitted as fluorescence.\nThe energy that makes up light are called photons. Photons that absorb and excite molecules hold a certain amount of energy that determines their wavelength, or color [Saleh]. When a molecule emits a photon as it returns to ground state, the energy in the photon that is emitted is less than in the photon that was excited. This means that the resulting photon will have a longer wavelength and a different color [Saleh].\nIn order to image fluorescence, the absorbed and emitted photons of light must be controlled based on their wavelength spectrums. The excitation wavelength spectrum and the emission wavelength spectrum can often overlap, allowing the camera to capture photons of both wavelengths. An example of these spectrums is shown in Fig. #. In order to see the fluorescence of a compound, only the emitted light must be captured by the camera. Implementing an optical filter can help to control what wavelengths are captured. Optical filters allow for wavelengths of a certain range to be the only wavelengths detected by a camera by filtering out other wavelengths Fluorescence imaging has a variety of applications including medical imaging, environmental monitoring, and biological research. A common application of fluorescence is to non-invasively analyze biological molecules in vivo. Most IVIS systems use fluorescence for this purpose, and OpenIVIS will also demonstrate this fluorescence capability.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -53,8 +53,8 @@
     "objectID": "sections/introduction/index.html#laser-speckle-contrast-imaging",
     "href": "sections/introduction/index.html#laser-speckle-contrast-imaging",
     "title": "3  Introduction",
-    "section": "3.3 1.3 Laser Speckle Contrast Imaging",
-    "text": "3.3 1.3 Laser Speckle Contrast Imaging\nLaser Speckle Contrast Imaging (LSCI) is an optical imaging technique used to track movement, such as blood flow, by visualizing blur. When a diffuse object is illuminated with coherent light, it produces scattered light waves which can be visualized as a random interference pattern called a speckle image [Boas]. In order to determine the size of the speckles in the speckle pattern, autocorrelation can be applied to the image. Autocorrelation compares the intensity of the speckle pattern at two different points by multiplying values across the entire image. The autocorrelation can also be found by taking the fourier transform of the images intensity distribution [Wikipedia]. Eq. 1 shows a speckle pattern’s autocorrelation calculation by taking the Fast Fourier Transform of the image’s intensity I(x,y). The transform is then multiplied by its complex conjugate, noted by the asterisk, in the fourier domain to obtain Fcc in Eq. 2. Finally, the inverse fourier transform returns the calculation to the spatial domain, resulting in the autocorrelation FA as shown in Eq. 3. Given the autocorrelation of a speckle image, the size of the speckle in pixels can be determined by finding the width of the autcorrelation’s peak at half of its maximum, often referred to as the full width half max (FWHM). Most speckle images have a speckle size of one to two pixels.\n\\[\nF_{fft}(f) = FFT\\{I(x,y)\\}                    Eq. 1\n\\]\nFcc(f) =Ffft(f)Ffft*(f) Eq. 2 FA(t) = IFFT{Fcc(f)} Eq. 3\nStatic speckle images have high contrast patterns but when movement is imaged, the fluctuations in intensity can cause the contrast between neighboring speckles to decrease. The speckle contrast, K, can be derived as the standard deviation of pixel intensity over the mean pixel intensity, as shown in Eq. 4. Moving objects, such as blood flowing in a vein, causes the speckle pattern to shift, or decorrelate [Briers]. When this occurs, the intensity of neighboring speckles will become more similar, decreasing their contrast value.\nK =  Eq. 4\nIn order to compute the contrast of a full speckle image, a small window is applied to the original speckle pattern, typically 5x5 or 7x7 pixels large. This window, often referred to as a “neighborhood” is run over the entire image, computing the speckle contrast K for the intensities at each location before shifting over by 1 pixel at a time. The image is then reconstructed using the respective K values in order to produce a laser speckle contrast image. A speckle image is shown in Fig. #a, and its corresponding LSCI reproduction is shown in Fig. #b. By comparing the contrast patterns between different speckle images over time, the velocity of the movement being imaged can be determined.",
+    "section": "4.3 2.3 Laser Speckle Contrast Imaging",
+    "text": "4.3 2.3 Laser Speckle Contrast Imaging\nLaser Speckle Contrast Imaging (LSCI) is an optical imaging technique used to track movement, such as blood flow, by visualizing blur. When a diffuse object is illuminated with coherent light, it produces scattered light waves which can be visualized as a random interference pattern called a speckle image [Boas]. In order to determine the size of the speckles in the speckle pattern, autocorrelation can be applied to the image. Autocorrelation compares the intensity of the speckle pattern at two different points by multiplying values across the entire image. The autocorrelation can also be found by taking the fourier transform of the images intensity distribution [Wikipedia]. Eq. 1 shows a speckle pattern’s autocorrelation calculation by taking the Fast Fourier Transform of the image’s intensity I(x,y). The transform is then multiplied by its complex conjugate, noted by the asterisk, in the fourier domain to obtain Fcc in Eq. 2. Finally, the inverse fourier transform returns the calculation to the spatial domain, resulting in the autocorrelation FA as shown in Eq. 3. Given the autocorrelation of a speckle image, the size of the speckle in pixels can be determined by finding the width of the autcorrelation’s peak at half of its maximum, often referred to as the full width half max (FWHM). Most speckle images have a speckle size of one to two pixels.\n\\(F_{fft}(f) = FFT\\{I(x,y)\\}\\) & \\ \\(F_{cc}(f) = F_{fft}(f)\\times F_{fft}^{*}(f)\\) & \\ \\(F_{A}(t) = IFFT\\{F_{cc}(f)\\}\\) & \\\nStatic speckle images have high contrast patterns but when movement is imaged, the fluctuations in intensity can cause the contrast between neighboring speckles to decrease. The speckle contrast, K, can be derived as the standard deviation of pixel intensity over the mean pixel intensity, as shown in Eq. 4. Moving objects, such as blood flowing in a vein, causes the speckle pattern to shift, or decorrelate [Briers]. When this occurs, the intensity of neighboring speckles will become more similar, decreasing their contrast value.\n$& \\(K = \\frac{\\sigma }{&lt;I&gt;}\\) & \nIn order to compute the contrast of a full speckle image, a small window is applied to the original speckle pattern, typically 5x5 or 7x7 pixels large. This window, often referred to as a “neighborhood” is run over the entire image, computing the speckle contrast K for the intensities at each location before shifting over by 1 pixel at a time. The image is then reconstructed using the respective K values in order to produce a laser speckle contrast image. A speckle image is shown in Fig. #a, and its corresponding LSCI reproduction is shown in Fig. #b. By comparing the contrast patterns between different speckle images over time, the velocity of the movement being imaged can be determined.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -62,101 +62,111 @@
   {
     "objectID": "sections/methods/index.html",
     "href": "sections/methods/index.html",
-    "title": "4  Methods",
+    "title": "4  3. Methods",
     "section": "",
-    "text": "4.1 2.1 Physical Construction",
+    "text": "5 3 Methods",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
+    ]
+  },
+  {
+    "objectID": "sections/methods/index.html#physical-construction",
+    "href": "sections/methods/index.html#physical-construction",
+    "title": "4  3. Methods",
+    "section": "5.1 3.1 Physical Construction",
+    "text": "5.1 3.1 Physical Construction",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
     ]
   },
   {
     "objectID": "sections/methods/index.html#electrical-components-and-software",
     "href": "sections/methods/index.html#electrical-components-and-software",
-    "title": "4  Methods",
-    "section": "4.2 2.2 Electrical Components and Software",
-    "text": "4.2 2.2 Electrical Components and Software",
+    "title": "4  3. Methods",
+    "section": "5.2 3.2 Electrical Components and Software",
+    "text": "5.2 3.2 Electrical Components and Software",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
     ]
   },
   {
     "objectID": "sections/methods/index.html#experiments",
     "href": "sections/methods/index.html#experiments",
-    "title": "4  Methods",
-    "section": "4.3 2.3 Experiments",
-    "text": "4.3 2.3 Experiments\n\n4.3.1 2.3.1 Verification\n\n\n4.3.2 2.3.2 FITC\n\n\n4.3.3 2.3.3 LSCI",
+    "title": "4  3. Methods",
+    "section": "5.3 3.3 Experiments",
+    "text": "5.3 3.3 Experiments\n\n5.3.1 3.3.1 Verification\n\n\n5.3.2 3.3.2 FITC\n\n\n5.3.3 3.3.3 LSCI",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methods</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3. Methods</span>"
     ]
   },
   {
     "objectID": "sections/results/results.html",
     "href": "sections/results/results.html",
-    "title": "5  Results",
+    "title": "5  4. Results",
     "section": "",
-    "text": "5.1 3.1 System Verification and Setup",
+    "text": "6 4. Results",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
     ]
   },
   {
-    "objectID": "sections/results/results.html#flourescence-imaging",
-    "href": "sections/results/results.html#flourescence-imaging",
-    "title": "5  Results",
-    "section": "5.2 3.2 Flourescence Imaging",
-    "text": "5.2 3.2 Flourescence Imaging",
+    "objectID": "sections/results/results.html#system-verification-and-setup",
+    "href": "sections/results/results.html#system-verification-and-setup",
+    "title": "5  4. Results",
+    "section": "6.1 4.1 System Verification and Setup",
+    "text": "6.1 4.1 System Verification and Setup",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
+    ]
+  },
+  {
+    "objectID": "sections/results/results.html#flourescence-imaging-fluorescence-imaging",
+    "href": "sections/results/results.html#flourescence-imaging-fluorescence-imaging",
+    "title": "5  4. Results",
+    "section": "6.2 4.2 Flourescence Imaging {fluorescence-imaging}",
+    "text": "6.2 4.2 Flourescence Imaging {fluorescence-imaging}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
     ]
   },
   {
     "objectID": "sections/results/results.html#laser-speckle-contrast-imaging",
     "href": "sections/results/results.html#laser-speckle-contrast-imaging",
-    "title": "5  Results",
-    "section": "5.3 3.3 Laser Speckle Contrast Imaging",
-    "text": "5.3 3.3 Laser Speckle Contrast Imaging\nThe advantage to using Quarto as compared to another method of documenting your work is that you can include executable Python code inline with your project. This means that you can provide your data and have your figures re-render without needing to execute separately and then include them into the project.",
+    "title": "5  4. Results",
+    "section": "6.3 4.3 Laser Speckle Contrast Imaging",
+    "text": "6.3 4.3 Laser Speckle Contrast Imaging",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
-    ]
-  },
-  {
-    "objectID": "sections/results/results.html#demonstration",
-    "href": "sections/results/results.html#demonstration",
-    "title": "5  Results",
-    "section": "5.4 Demonstration",
-    "text": "5.4 Demonstration\n\n5.4.1 Create sample dataset\nFor example, let’s consider a toy example. First, we’ll create and save a data set. In your case, you’ll likely skip this step since you’ll likely have a dataset from elsewhere to use.\nFirst, let’s create a Python code block to create some random data.\n\nimport numpy as np\n\nN = 100 # Set number of data points\n\nx = np.linspace(0, 10, N) # Create x vector\ny = 5*x + np.random.rand(N)      # Generate linear data with simulated noise\n\nNext, let’s save this data in our /data/ subfolder. You can choose various formats, but one convenient option is to save the data in a .mat file. This way it can be opened and processed in Matlab as well as Python. It also allows you to nicely structure the data and will make the loading and plotting code we develop Matlab compatible.\n\nimport scipy.io as sio  # Load Scipy IO module which has the function to save and load .mat files\n\ndata_to_save = {'x': x, 'y': y} # Create dictionary to story the data\nsio.savemat('data/test_data.mat', data_to_save)  # Save the data to a .mat file\n\n\n\n5.4.2 Load and Plot Data\nFirst let’s load the data from the .mat file.\n\ndata_load = sio.loadmat('data/test_data.mat')\n\nThen, let’s plot it.\n\n\n\n\n\n\nWarning\n\n\n\nNote carefully that because of how savemat() works, we need to index into the zeroth element of the dictionary values in order to get to the data we want.\n\n\n\nimport matplotlib.pyplot as plt\n\nfig, ax = plt.subplots()\n\nax.plot(data_load['x'][0],data_load['y'][0]) # Note that we are using the loaded data here and watch out for indexing.\nax.set_xlabel('x [units]')\nax.set_ylabel('y [units]')\nax.set_title('Plot of Random Data')\n\nText(0.5, 1.0, 'Plot of Random Data')\n\n\n\n\n\n\n\n\n\n\n\n5.4.3 Save and Plot Images of Figures\nWe can even go ahead and save the plots as images if we want to have the flexiblity to include them elsewhere.\n\nfig.savefig('images/test_data_plot.png', dpi=300)\n\nThen we can directly display as a Quarto figure as usual.\n\n\n\n\n\n\nFigure 5.1: Displaying image of plotted random example data.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Results</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4. Results</span>"
     ]
   },
   {
     "objectID": "sections/conclusion/index.html",
     "href": "sections/conclusion/index.html",
-    "title": "6  Conclusion",
+    "title": "6  5. Conclusion",
     "section": "",
-    "text": "The conclusion summaries the main results of your paper. It generally mirrors the abstract, but in slightly more detail.\nIt is also common for the conclusion to include a discussion of the data, limitations of the work, and directions for future work.",
+    "text": "7 5. Conclusion\nThe conclusion summaries the main results of your paper. It generally mirrors the abstract, but in slightly more detail.\nIt is also common for the conclusion to include a discussion of the data, limitations of the work, and directions for future work.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Conclusion</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>5. Conclusion</span>"
     ]
   },
   {
     "objectID": "sections/acknowledgements/index.html",
     "href": "sections/acknowledgements/index.html",
-    "title": "7  Acknowledgments",
+    "title": "7  6. Acknowledgments",
     "section": "",
-    "text": "7.1 Funding Acknowledgement\nA sample acknowledgement of funding by an NSF grant might read something like the following.",
+    "text": "7.1 6.1 Funding Acknowledgement\nA sample acknowledgement of funding by an NSF grant might read something like the following.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Acknowledgments</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>6. Acknowledgments</span>"
     ]
   },
   {
     "objectID": "sections/acknowledgements/index.html#funding-acknowledgement",
     "href": "sections/acknowledgements/index.html#funding-acknowledgement",
-    "title": "7  Acknowledgments",
+    "title": "7  6. Acknowledgments",
     "section": "",
     "text": "This research was supported by the National Science Foundation under Grant No. [Your Grant Number]. The authors would like to thank [any other contributors, institutions, or facilities] for their support and collaboration. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.”",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Acknowledgments</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>6. Acknowledgments</span>"
     ]
   }
 ]
