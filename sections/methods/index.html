@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -249,8 +269,8 @@ window.Quarto = {
 </section>
 <section id="fitc" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="fitc"><span class="header-section-number">4.3.2</span> Fluorescein Ssothiocyanate</h3>
-<p>To test the fluorescence capabilities of OpenIVIS, ten concentrations of the commonly used fluorescent dye, Fluorescein isothiocyanate (FITC), were diluted in ethanol. FITC emits fluorescence of wavelengths ranging in the green spectrum with a peak around 530 nm [ThermoFisher]. To excite the FITC solutions, blue LEDs were used to illuminate the dye at full brightness. The Neopixel blue spectrum has a peak approximately 450 nm. To prevent the camera from detecting the excitation light, a 515 nm long pass optical filter was placed in front of the camera. The filter blocked out all wavelengths lower than 515 nm, including the blue excitation light. The ten different concentrations of FITC ranged from 10-3 M to 10-12 M. In a 96-well PCR plate, 2 wells of each FITC concentration were placed in a four by five orientation and put into the OpenIVIS box for imaging.</p>
-<p>To quantify the fluorescence of each FITC concentration, the raw image data from the captured images was converted into Bayer images. The Bayer images have a red, green, green, blue (RGGB) color filter array as shown in Fig. #. In this color filter array there is only one color component in each pixel of the image [Lee]. The other two color components for the pixel must be interpolated from information gathered from its neighboring pixels [Lee]. After getting the Bayer images, the first green channel was isolated so that the images have empty and filled values ranging from 0 to 1023 arbitrary units. These images allow for the intensity of the pixels to be extracted and compared across multiple images. Images were taken of the FITC concentrations in a well plate with varying settings. Exposure time and brightness level were changed to see which sets of controls can best represent the trend between FITC concentration and pixel intensity. The final experiment cycled through nine different exposure times, ranging from 1 ms to 10000ms. For each exposure time, five images of the well plate were captured with a brightness level of 1. For mathematical analysis, a python script was used to save the green-channel intensities for each of the filled wells, along with two empty wells for comparison. At each well, the script took the mean intensity and standard deviation of a circle of pixels within a radius of 20 pixels, when given the corresponding center pixel location. These values were saved in an excel spreadsheet and then inputted into Matlab to find the mean and standard deviation of each concentration of FITC across five sets of images. The values were then plotted as intensity over FITC concentration in M.</p>
+<p>To test the fluorescence capabilities of OpenIVIS, ten concentrations of the commonly used fluorescent dye, Fluorescein isothiocyanate (FITC), were diluted in ethanol. FITC emits fluorescence of wavelengths ranging in the green spectrum with a peak around 530 nm <span class="citation" data-cites="fluorescein"><a href="#ref-fluorescein" role="doc-biblioref">[1]</a></span>. To excite the FITC solutions, blue LEDs were used to illuminate the dye at full brightness. The Neopixel blue spectrum has a peak approximately 450 nm. To prevent the camera from detecting the excitation light, a 515 nm long pass optical filter was placed in front of the camera. The filter blocked out all wavelengths lower than 515 nm, including the blue excitation light. The ten different concentrations of FITC ranged from 10-3 M to 10-12 M. In a 96-well PCR plate, 2 wells of each FITC concentration were placed in a four by five orientation and put into the OpenIVIS box for imaging.</p>
+<p>To quantify the fluorescence of each FITC concentration, the raw image data from the captured images was converted into Bayer images. The Bayer images have a red, green, green, blue (RGGB) color filter array as shown in Fig. #. In this color filter array there is only one color component in each pixel of the image <span class="citation" data-cites="lee2001novel"><a href="#ref-lee2001novel" role="doc-biblioref">[2]</a></span>. The other two color components for the pixel must be interpolated from information gathered from its neighboring pixels <span class="citation" data-cites="lee2001novel"><a href="#ref-lee2001novel" role="doc-biblioref">[2]</a></span>. After getting the Bayer images, the first green channel was isolated so that the images have empty and filled values ranging from 0 to 1023 arbitrary units. These images allow for the intensity of the pixels to be extracted and compared across multiple images. Images were taken of the FITC concentrations in a well plate with varying settings. Exposure time and brightness level were changed to see which sets of controls can best represent the trend between FITC concentration and pixel intensity. The final experiment cycled through nine different exposure times, ranging from 1 ms to 10000ms. For each exposure time, five images of the well plate were captured with a brightness level of 1. For mathematical analysis, a python script was used to save the green-channel intensities for each of the filled wells, along with two empty wells for comparison. At each well, the script took the mean intensity and standard deviation of a circle of pixels within a radius of 20 pixels, when given the corresponding center pixel location. These values were saved in an excel spreadsheet and then inputted into Matlab to find the mean and standard deviation of each concentration of FITC across five sets of images. The values were then plotted as intensity over FITC concentration in M.</p>
 </section>
 <section id="lsci" class="level3" data-number="4.3.3">
 <h3 data-number="4.3.3" class="anchored" data-anchor-id="lsci"><span class="header-section-number">4.3.3</span> Laser Speckle Contrast Imaging</h3>
@@ -266,6 +286,14 @@ A_{R} = log(\frac{I_{635nm}-I_{520nm}}{I_{635nm}+I_{520nm}}) \quad \text{(Eq.5)}
 \end{align}\]</span></p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-fluorescein" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span>“Fluorescein (FITC) - US.”</span> Jul. 2024. Available: <a href="https://www.thermofisher.com/us/en/home/life-science/cell-analysis/fluorophores/fluorescein.html">https://www.thermofisher.com/us/en/home/life-science/cell-analysis/fluorophores/fluorescein.html</a></div>
+</div>
+<div id="ref-lee2001novel" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S.-Y. Lee and A. Ortega, <span>“A novel approach of image compression in digital cameras with a bayer color filter array,”</span> in <em>Proceedings 2001 international conference on image processing (cat. No. 01CH37205)</em>, IEEE, 2001, pp. 482–485.</div>
+</div>
+</div>
 </section>
 </section>
 

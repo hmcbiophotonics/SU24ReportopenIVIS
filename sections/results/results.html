@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -242,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="5.1" class="anchored" data-anchor-id="system-verification-and-setup"><span class="header-section-number">5.1</span> System Verification and Setup</h2>
 <section id="changing-exposure-time" class="level3" data-number="5.1.1">
 <h3 data-number="5.1.1" class="anchored" data-anchor-id="changing-exposure-time"><span class="header-section-number">5.1.1</span> Changing Exposure Time</h3>
-<p>In Fig. #, there is a positive, non-linear relationship between exposure time and pixel intensity. Initially there is a large increase in pixel intensity as exposure time increases and this is most likely because as exposure time increases, more photons will be detected by the pixels in the camera. As exposure time continues to increase, the increase in pixel intensity starts to decrease. This is most likely because the pixels can only hold a certain amount of photons and when a pixel has stored its maximum amount of photons, it has reached its saturation point. As more photons are being detected by the pixels from the increasing exposure times, the pixels are getting closer to their saturation point (Hasinoff). This plot also has a small error across the different trials, suggesting that the exposure times are precise.</p>
+<p>In Fig. #, there is a positive, non-linear relationship between exposure time and pixel intensity. Initially there is a large increase in pixel intensity as exposure time increases and this is most likely because as exposure time increases, more photons will be detected by the pixels in the camera. As exposure time continues to increase, the increase in pixel intensity starts to decrease. This is most likely because the pixels can only hold a certain amount of photons and when a pixel has stored its maximum amount of photons, it has reached its saturation point. As more photons are being detected by the pixels from the increasing exposure times, the pixels are getting closer to their saturation point <span class="citation" data-cites="hasinoff2021saturation"><a href="#ref-hasinoff2021saturation" role="doc-biblioref">[1]</a></span>. This plot also has a small error across the different trials, suggesting that the exposure times are precise.</p>
 </section>
 <section id="changing-brightness-level" class="level3" data-number="5.1.2">
 <h3 data-number="5.1.2" class="anchored" data-anchor-id="changing-brightness-level"><span class="header-section-number">5.1.2</span> Changing Brightness Level</h3>
@@ -264,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Using the process described in Section 3.3.3, analysis on simulated speckle images and the effect of filtering was run. Fig. # depicts the simulated results for a filter with cutoff frequency of N4, where N denotes the size of the speckle image in pixels, while Figures # and # show the results for cutoff frequency of N8 and N16, respectively.</p>
 <section id="create-a-simulated-speckle-image" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-simulated-speckle-image">Create a Simulated Speckle Image</h4>
-<div id="7bd381e3" class="cell" data-execution_count="1">
+<div id="485d98b6" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -295,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="create-a-filter-and-apply-it-to-the-speckle-image" class="level4" data-number="5.3.1.1">
 <h4 data-number="5.3.1.1" class="anchored" data-anchor-id="create-a-filter-and-apply-it-to-the-speckle-image"><span class="header-section-number">5.3.1.1</span> Create a filter and Apply it to the Speckle Image</h4>
-<div id="f65faba9" class="cell" data-execution_count="2">
+<div id="186f48b0" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute amplitude, phase and intensity of the original speckle pattern</span></span>
@@ -329,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="compute-the-autocorrelation-and-speckle-size" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="compute-the-autocorrelation-and-speckle-size">Compute the Autocorrelation and Speckle Size</h4>
-<div id="2e5f5af7" class="cell" data-execution_count="3">
+<div id="824eebec" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute autocorrelation of the original and filtered speckle patterns</span></span>
@@ -406,7 +426,7 @@ Filtered speckle size (width at half maximum): 1 pixels</code></pre>
 </section>
 <section id="create-plots" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-plots">Create plots</h4>
-<div id="11d1d97f" class="cell" data-execution_count="4">
+<div id="24c88c39" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_colorbar(him, ax, cbar_title<span class="op">=</span><span class="st">""</span>):</span>
@@ -488,6 +508,11 @@ Figure&nbsp;5.1: The simulated and filtered speckle images.
 <p>The system was successful in taking time lapse images over an extended period of time and could be used for a broad range of biological imaging applications. The time lapse of the Tobacco Hornworm growth resulted in 45 images over the span of 9 days, with 5 hours between each image. An example of one week’s worth of growth is shown in Fig. #, and an image of the full box on the first and last day is shown in Fig. #. While the OpenIVIS system was able to take images of lettuce leaf decomposition over a three day period, the anthocyanin response was not able to be determined. The response imaged on the 1st and 3rd days of the trial are shown in Fig. # and #. The anthocyanin response is very similar between the two images, and discernible changes are not able to be visualized. It is possible that the type of lettuce being imaged does not have a strong enough concentration of anthocyanin to properly fluoresce, resulting in similar results. Additionally, due to limited documentation on how to conduct this experiment, the experimental process and calculations used may be incorrect. An accurate depiction of this trial is shown in the system’s previous publication by Branning et. al [Branning].</p>
 
 
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+<div id="ref-hasinoff2021saturation" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. W. Hasinoff, <span>“Saturation (imaging),”</span> in <em>Computer vision: A reference guide</em>, Springer, 2021, pp. 1107–1109.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
