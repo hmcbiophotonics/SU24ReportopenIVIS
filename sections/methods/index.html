@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 </head><body class="floating">\setcounter{page}{4}
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 
@@ -165,8 +194,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments"><span class="header-section-number">4.3</span> Experiments</a>
   <ul class="collapse">
   <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification"><span class="header-section-number">4.3.1</span> Verification</a></li>
-  <li><a href="#fitc" id="toc-fitc" class="nav-link" data-scroll-target="#fitc"><span class="header-section-number">4.3.2</span> FITC</a></li>
-  <li><a href="#lsci" id="toc-lsci" class="nav-link" data-scroll-target="#lsci"><span class="header-section-number">4.3.3</span> LSCI</a></li>
+  <li><a href="#fitc" id="toc-fitc" class="nav-link" data-scroll-target="#fitc"><span class="header-section-number">4.3.2</span> Fluorescein Ssothiocyanate</a></li>
+  <li><a href="#lsci" id="toc-lsci" class="nav-link" data-scroll-target="#lsci"><span class="header-section-number">4.3.3</span> Laser Speckle Contrast Imaging</a></li>
+  <li><a href="#additional-capabilities" id="toc-additional-capabilities" class="nav-link" data-scroll-target="#additional-capabilities"><span class="header-section-number">4.3.4</span> Additional Capabilities</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -218,14 +248,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Since the above process will only verify the LEDs based on what the camera is detecting from the LED light, it was also necessary to test the actual LED output using a photodiode. The photodiode outputs wattage values based on the intensity of light detected. Changing both the brightness levels from the NeoPixel settings and the color code values of the red, green, blue, and white LEDs should result in positive trends between brightness value and output wattage. The photodiode was placed inside of the system’s main box compartment with the sensor facing upward. Data was collected for three different sensor locations in the box. For each location, a Python script was used to cycle through the Neopixel brightness levels from 0 to 1, increasing by 0.1 each time to achieve 11 equally distributed brightness levels. For each brightness level, the color code tuples were also cycled from 0 to 255 for each LED color. The color code values increased by 26 a.u. each cycle to achieve 11 equality distributed values. The LED output in nW was saved in a spreadsheet for each setting, resulting in XXX values for each photodiode sensor location. The trends in the white LED output were analyzed for changes in brightness level at a constant color code of 255 a.u., and the changes in color code for a constant brightness level of 1. For each setting, the average wattage and standard deviation was taken across the three trials and inputted into a MatLab script that created graphs of those values across changes in Neopixel setting.</p>
 </section>
 <section id="fitc" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="fitc"><span class="header-section-number">4.3.2</span> FITC</h3>
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="fitc"><span class="header-section-number">4.3.2</span> Fluorescein Ssothiocyanate</h3>
 <p>To test the fluorescence capabilities of OpenIVIS, ten concentrations of the commonly used fluorescent dye, Fluorescein isothiocyanate (FITC), were diluted in ethanol. FITC emits fluorescence of wavelengths ranging in the green spectrum with a peak around 530 nm [ThermoFisher]. To excite the FITC solutions, blue LEDs were used to illuminate the dye at full brightness. The Neopixel blue spectrum has a peak approximately 450 nm. To prevent the camera from detecting the excitation light, a 515 nm long pass optical filter was placed in front of the camera. The filter blocked out all wavelengths lower than 515 nm, including the blue excitation light. The ten different concentrations of FITC ranged from 10-3 M to 10-12 M. In a 96-well PCR plate, 2 wells of each FITC concentration were placed in a four by five orientation and put into the OpenIVIS box for imaging.</p>
 <p>To quantify the fluorescence of each FITC concentration, the raw image data from the captured images was converted into Bayer images. The Bayer images have a red, green, green, blue (RGGB) color filter array as shown in Fig. #. In this color filter array there is only one color component in each pixel of the image [Lee]. The other two color components for the pixel must be interpolated from information gathered from its neighboring pixels [Lee]. After getting the Bayer images, the first green channel was isolated so that the images have empty and filled values ranging from 0 to 1023 arbitrary units. These images allow for the intensity of the pixels to be extracted and compared across multiple images. Images were taken of the FITC concentrations in a well plate with varying settings. Exposure time and brightness level were changed to see which sets of controls can best represent the trend between FITC concentration and pixel intensity. The final experiment cycled through nine different exposure times, ranging from 1 ms to 10000ms. For each exposure time, five images of the well plate were captured with a brightness level of 1. For mathematical analysis, a python script was used to save the green-channel intensities for each of the filled wells, along with two empty wells for comparison. At each well, the script took the mean intensity and standard deviation of a circle of pixels within a radius of 20 pixels, when given the corresponding center pixel location. These values were saved in an excel spreadsheet and then inputted into Matlab to find the mean and standard deviation of each concentration of FITC across five sets of images. The values were then plotted as intensity over FITC concentration in M.</p>
 </section>
 <section id="lsci" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="lsci"><span class="header-section-number">4.3.3</span> LSCI</h3>
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="lsci"><span class="header-section-number">4.3.3</span> Laser Speckle Contrast Imaging</h3>
 <p>In order to verify the analysis and LSCI computation of speckle images, a python script was used to create simulated speckle images. A simulated speckle pattern was generated using Python’s numpy library to make an NxN array of randomized, complex intensity values. Typical RGB images have intensities ranging from 0 to 255 arbitrary units. Given the simulated speckle array, a python processing script was used to calculate the phase and amplitude information of the image. Additionally, the script applied a circular, low pass filter in the fourier domain to the speckle pattern to enhance the quality of the image. An autocorrelation calculation was then applied to both the original and filtered speckle patterns using the fourier method described in Section 1.3 in order to quantify the temporal or spatial variations. Next, the speckle size was determined by finding the location in which the autocorrelation reaches the maximum of its peak on either side. The simulation was then run through a LSCI loop to calculate the K values as described in Section 1.3.</p>
 <p>To take real-world speckle images for analysis, the modified box lid described in Section 2.3.2 was used. The laser module in Fig. #a was affixed to the lid of the OpenIVIS box using a 3/8” 1/4-20 bolt along with the Arducam camera, as shown in Fig. #b. In order to mimic movement that might be seen in a biological system, such as a vein with blood flow, a clear plastic tube was run through the center of the box. Diffuse liquid was pushed through the tube at varying flow rates by a kdScientific Syringe Pump and a 20 mL syringe with a Luer Lock. The area of the tube under study was placed directly under the Raspberry Pi camera and illuminated with the laser module. Images were taken using the corresponding python script and saved as .bmp files, and Bayer images as .npy arrays. Additionally, the green channel of the Bayer image were saved using a mask, as discussed in Section 2.3.2. The resulting images were processed using an additional python program to calculate the speckle size, intensity histogram and LSCI pattern.</p>
+</section>
+<section id="additional-capabilities" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="additional-capabilities"><span class="header-section-number">4.3.4</span> Additional Capabilities</h3>
+<p>In addition to fluorescence imaging and LSCI, the OpenIVIS system was verified for time lapse imaging. As discussed in the paper by Branning et. al [Branning], the IVIS system can be used to image growth or changes in an organism or process over time. To verify this capability, 11 Tobacco Hornworms in individual, clear tubes were placed into the main section of the imaging box. The box was kept in a room set to 73oC to maintain healthy temperatures. The Neopixel LEDs were set to their full brightness in order to promote proper lighting conditions for growth. A python script was run through the Raspberry Pi that captures time lapsed images over a 10 day period. Images were set to be taken every five hours during that period. The images were then saved in a folder to be analyzed for hornworm growth.</p>
+<p>The OpenIVIS system’s versatile nature also provides opportunities for further scientific experiments. One possibility for the system’s applications is the imaging of a degrading plant’s Anthocyanin response. When plants decompose, they produce a fluorescent pigment called Anthocyanin. The Anthocyanin response can be visualized by taking the logarithm of the pixel intensities when excited by a red wavelength of light, over the intensity excited by a green wavelength of light, as shown in Eq. 5. In the OpenIVIS box, a lettuce leaf was placed in the main compartment. Using the Neopixel LED array, images were taken with red and green excitations of 653 nm and 520 nm respectively. Additionally, a long pass optical filter with a cutoff wavelength of 665 nm was placed below the camera in the system’s filter holder to remove wavelengths below the red value. Images were taken three days apart for decomposition analysis. The images were then processed in python by applying Eq. 5 for each pixel location in the image.</p>
+<p><span class="math display">\[\begin{align}
+A_{R} = log(\frac{I_{635nm}-I_{520nm}}{I_{635nm}+I_{520nm}}) \quad \text{(Eq.5)}
+\end{align}\]</span></p>
 
 
 </section>
