@@ -220,7 +220,7 @@ window.Quarto = {
   <li><a href="#experiments" id="toc-experiments" class="nav-link" data-scroll-target="#experiments"><span class="header-section-number">4.3</span> Experiments</a>
   <ul>
   <li><a href="#verification" id="toc-verification" class="nav-link" data-scroll-target="#verification"><span class="header-section-number">4.3.1</span> Verification</a></li>
-  <li><a href="#fitc" id="toc-fitc" class="nav-link" data-scroll-target="#fitc"><span class="header-section-number">4.3.2</span> Fluorescein Ssothiocyanate</a></li>
+  <li><a href="#fitc" id="toc-fitc" class="nav-link" data-scroll-target="#fitc"><span class="header-section-number">4.3.2</span> Fluorescein Isothiocyanate</a></li>
   <li><a href="#lsci" id="toc-lsci" class="nav-link" data-scroll-target="#lsci"><span class="header-section-number">4.3.3</span> Laser Speckle Contrast Imaging</a></li>
   <li><a href="#additional-capabilities" id="toc-additional-capabilities" class="nav-link" data-scroll-target="#additional-capabilities"><span class="header-section-number">4.3.4</span> Additional Capabilities</a></li>
   </ul></li>
@@ -251,11 +251,11 @@ window.Quarto = {
 
 <section id="physical-construction" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="physical-construction"><span class="header-section-number">4.1</span> Physical Construction</h2>
-<p>The OpenIVIS box is made out of laser cut acrylic and 3D printed parts. Black acrylic was cut to form the base, back, and sides of the box. The acrylic pieces have extruding parts along their rims to connect in a jigsaw puzzle configuration. This ensures that no light can leak out of the box and that the box is stable. The front of the box is made from a 3D printed PLA filament and has long notches to allow for the black acrylic door to slide up and down. Fig. 4.1 shows the fully assembled box.</p>
+<p>The OpenIVIS box is made out of laser cut acrylic and 3D printed parts. Black acrylic was cut to form the base, back, and sides of the box. The acrylic pieces have extruding parts along their rims to connect in a jigsaw puzzle configuration. This ensures that no light can leak out of the box and that the box is stable. The front of the box is made from a 3D printed PLA filament and has long notches to allow for the black acrylic door to slide up and down. Fig. 4.1 shows the fully assembled box (a) and the inside of the box (b) where subjects under test are placed.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./images/assebledBox.png" class="img-fluid figure-img"></p>
-<figcaption>Fig. 4.1 Image of Assembled Box</figcaption>
+<p><img src="./images/FullBox.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 4.1 Image of assembled box (a) and inside of the box (b)</figcaption>
 </figure>
 </div>
 <p>The box has two replaceable lids for the different imaging methods.The first lid is designed for laser speckle contrast imaging. The lid is made out of black acrylic with three holes cut into it. One hole holds the camera while the other two holes hold the laser diode configuration described in Section 2.2. Fig. 4.2 shows the assembly used for LSCI.</p>
@@ -265,11 +265,11 @@ window.Quarto = {
 <figcaption>Fig. 4.2 Image of Assembled Box</figcaption>
 </figure>
 </div>
-<p>The second lid is designed for fluorescence imaging. It has an upper layer of black acrylic jigsaw pieces. On the underside of the lid is a 3D printed ring to hold an array of Neopixel LEDs. Beneath the LED array is a diffusion plate made of white acrylic to allow for the LEDs to shine through and into the box. A 3D print ed camera holder is secured to the white acrylic and has space for a 3D printed optical filter holder to slide in beneath the camera. Fig. 4.3 shows the fully assembled fluorescence top. This configuration can also be used for other imaging methods that implement the Neopixel LED array, as discussed in Section 2.3.4.</p>
+<p>The second lid is designed for fluorescence imaging. It has an upper layer of black acrylic jigsaw pieces. On the underside of the lid is a 3D printed ring to hold an array of Neopixel LEDs. Beneath the LED array is a diffusion plate made of white acrylic to allow for the LEDs to shine through and into the box. A 3D print ed camera holder is secured to the white acrylic and has space for a 3D printed optical filter holder to slide in beneath the camera. Fig. 4.3 shows the fully assembled fluorescence top and LED array. This configuration can also be used for other imaging methods that implement the Neopixel LED array, as discussed in Section 4.3.4.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./images/fluorBox.png" class="img-fluid figure-img"></p>
-<figcaption>Fig. 4.3 Image of Fluorescent Lid</figcaption>
+<p><img src="./images/FITCConfig.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 4.3 Image of the fluorescence lid (a) and the lid with the LED array (b)</figcaption>
 </figure>
 </div>
 </section>
@@ -304,7 +304,7 @@ window.Quarto = {
 <p>All of the system verification experiments utilized the fluorescence imaging setup shown in Fig. 4.3</p>
 </section>
 <section id="fitc" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="fitc"><span class="header-section-number">4.3.2</span> Fluorescein Ssothiocyanate</h3>
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="fitc"><span class="header-section-number">4.3.2</span> Fluorescein Isothiocyanate</h3>
 <p>To test the fluorescence capabilities of OpenIVIS, ten concentrations of the commonly used fluorescent dye, Fluorescein isothiocyanate (FITC), were diluted in ethanol. FITC emits fluorescence of wavelengths ranging in the green spectrum with a peak around 530 nm [ThermoFisher]. To excite the FITC solutions, blue LEDs were used to illuminate the dye at full brightness. The Neopixel blue spectrum has a peak approximately 450 nm. To prevent the camera from detecting the excitation light, a 515 nm long pass optical filter was placed in front of the camera. The filter blocked out all wavelengths lower than 515 nm, including the blue excitation light. The ten different concentrations of FITC ranged from 10-3 M to 10-12 M. In a 96-well PCR plate, 2 wells of each FITC concentration were placed in a four by five orientation and put into the OpenIVIS box for imaging.</p>
 <p>To quantify the fluorescence of each FITC concentration, the raw image data from the captured images was converted into Bayer images. The Bayer images have a red, green, green, blue (RGGB) color filter array as shown in Fig. 4.6. In this color filter array there is only one color component in each pixel of the image <span class="citation" data-cites="lee2001novel"><a href="#ref-lee2001novel" role="doc-biblioref">[2]</a></span>. The other two color components for the pixel must be interpolated from information gathered from its neighboring pixels <span class="citation" data-cites="lee2001novel"><a href="#ref-lee2001novel" role="doc-biblioref">[2]</a></span>. After getting the Bayer images, the first green channel was isolated so that the images have empty and filled values ranging from 0 to 1023 arbitrary units. These images allow for the intensity of the pixels to be extracted and compared across multiple images. Images were taken of the FITC concentrations in a well plate with varying settings. Exposure time and brightness level were changed to see which sets of controls can best represent the trend between FITC concentration and pixel intensity. The final experiment cycled through nine different exposure times, ranging from 1 ms to 10000ms. For each exposure time, five images of the well plate were captured with a brightness level of 1. For mathematical analysis, a python script was used to save the green-channel intensities for each of the filled wells, along with two empty wells for comparison. At each well, the script took the mean intensity and standard deviation of a circle of pixels within a radius of 20 pixels, when given the corresponding center pixel location. These values were saved in an excel spreadsheet and then inputted into Matlab to find the mean and standard deviation of each concentration of FITC across five sets of images. The values were then plotted as intensity over FITC concentration in M.</p>
 <div class="quarto-figure quarto-figure-center">
