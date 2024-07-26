@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,6 +67,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head><body class="floating">\setcounter{page}{8}
 
 
@@ -196,15 +199,320 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="bill-of-materials" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="bill-of-materials"><span class="header-section-number">8.1</span> Bill of Materials</h2>
+<p>Access the bill of materials through the <a href="https://github.com/hmcbiophotonics/openIVIS/blob/main/Summer%202024/Bill%20of%20Materials.xlsx">Github Repo</a> or in the table below.</p>
+<div id="44036157" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Item</th>
+<th data-quarto-table-cell-role="th">Qty.</th>
+<th data-quarto-table-cell-role="th">Part #</th>
+<th data-quarto-table-cell-role="th">Distributor</th>
+<th data-quarto-table-cell-role="th">Link</th>
+<th data-quarto-table-cell-role="th">Cost per. Item</th>
+<th data-quarto-table-cell-role="th">Total Cost</th>
+<th data-quarto-table-cell-role="th">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Tobacco Hornworm larvae kit (12 pck)</td>
+<td>1.0</td>
+<td>143882</td>
+<td>Carolina Biological Supply Company</td>
+<td>https://www.carolina.com/moths/hornworm-eggs-m...</td>
+<td>57.80</td>
+<td>57.80</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>96 well pcr plate</td>
+<td>1.0</td>
+<td>B0CX4TKZR6</td>
+<td>Amazon</td>
+<td>https://www.amazon.com/Generic-96-Well-Plate-0...</td>
+<td>14.99</td>
+<td>14.99</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Ø25 mm Colored Glass Filter, 515 nm long pass ...</td>
+<td>1.0</td>
+<td>FGL515</td>
+<td>ThorLabs</td>
+<td>https://www.thorlabs.com/thorproduct.cfm?partn...</td>
+<td>43.91</td>
+<td>43.91</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Ø25 mm Colored Glass Filter, 665 nm long pass ...</td>
+<td>1.0</td>
+<td>FGL665</td>
+<td>ThorLabs</td>
+<td>https://www.thorlabs.com/thorproduct.cfm?partn...</td>
+<td>43.91</td>
+<td>43.91</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Ø25 mm Colored Glass Filter, 570 nm long pass ...</td>
+<td>1.0</td>
+<td>FGL570</td>
+<td>ThorLabs</td>
+<td>https://www.thorlabs.com/thorproduct.cfm?partn...</td>
+<td>31.06</td>
+<td>31.06</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Ø25 mm Colored Glass Filter, 695 nm long pass ...</td>
+<td>1.0</td>
+<td>FGL695</td>
+<td>ThorLabs</td>
+<td>https://www.thorlabs.com/thorproduct.cfm?partn...</td>
+<td>31.06</td>
+<td>31.06</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>1/4" (6mm) Solid Black Acrylic None Transparen...</td>
+<td>4.0</td>
+<td>B07KMQR4TP</td>
+<td>Amazon</td>
+<td>https://www.amazon.com/Black-Acrylic-Plexiglas...</td>
+<td>22.99</td>
+<td>91.96</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>4-channel I2C-safe Bi-directional Logic Level ...</td>
+<td>4.0</td>
+<td>757</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/757</td>
+<td>3.94</td>
+<td>15.76</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Breadboard-friendly 2.1mm DC barrel jack</td>
+<td>4.0</td>
+<td>373</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/373</td>
+<td>0.96</td>
+<td>3.84</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>3-pin JST SM Plug + Receptacle Cable Set</td>
+<td>4.0</td>
+<td>1663</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/1663</td>
+<td>1.50</td>
+<td>6.00</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>Flex Cable for Raspberry Pi Camera or Display ...</td>
+<td>2.0</td>
+<td>1731</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/1731</td>
+<td>2.95</td>
+<td>5.90</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>Terminal Block - 3-pin 3.5mm - pack of 5!</td>
+<td>1.0</td>
+<td>725</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/725</td>
+<td>3.95</td>
+<td>3.95</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>Arducam Acrylic Camera Enclosure Case for Rasp...</td>
+<td>1.0</td>
+<td>U6251-RED</td>
+<td>UCtronics</td>
+<td>https://www.uctronics.com/arducam-acrylic-came...</td>
+<td>5.99</td>
+<td>5.99</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>Brass M2.5 Standoffs for Pi HATs - Black Plate...</td>
+<td>4.0</td>
+<td>2336</td>
+<td>Adafruit</td>
+<td>https://www.adafruit.com/product/2336</td>
+<td>0.75</td>
+<td>3.00</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">16</td>
+<td>12V 5A Power Supply, Waysse Power Supply Adapt...</td>
+<td>1.0</td>
+<td>B08C594VNP</td>
+<td>Amazon</td>
+<td>https://www.amazon.com/Converter-100-220V-Tran...</td>
+<td>9.99</td>
+<td>9.99</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">17</td>
+<td>1/8" (3mm) Milky White Acrylic 12"x12" Sheet T...</td>
+<td>1.0</td>
+<td>B0818HYY8G</td>
+<td>Amazon</td>
+<td>https://www.amazon.com/Milky-Acrylic-Transluce...</td>
+<td>9.99</td>
+<td>9.99</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">18</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>0.00</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">19</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>0.00</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">20</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>379.11</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">22</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">23</td>
+<td>IGNORE BELOW</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">24</td>
+<td>Acrylic cement 5 oz</td>
+<td>1.0</td>
+<td>B003HNFLMY</td>
+<td>Amazon</td>
+<td>https://www.amazon.com/SCIGRIP-10315-Acrylic-C...</td>
+<td>14.35</td>
+<td>14.35</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 </section>
 <section id="python-packages" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="python-packages"><span class="header-section-number">8.2</span> Python Packages</h2>
+<p>The full list of Python packages needed is available below.</p>
 </section>
 <section id="python-code" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="python-code"><span class="header-section-number">8.3</span> Python Code</h2>
+<p>The python files can be accessed via the project’s <a href="https://github.com/hmcbiophotonics/openIVIS/tree/main/Summer%202024/raspberryPiFiles">GitHub Repo</a></p>
 </section>
 <section id="cad-files" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="cad-files"><span class="header-section-number">8.4</span> CAD Files</h2>
+<p>The CAD files can be accessed via the project’s <a href="https://github.com/hmcbiophotonics/openIVIS/tree/main/Summer%202024/Physical%20Components">GitHub Repo</a></p>
 
 
 </section>
