@@ -204,6 +204,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Acknowledgments</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sections/appendix/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -282,7 +288,7 @@ div.csl-indent {
 <p>In Fig. 5.1, there is a positive, non-linear relationship between exposure time and pixel intensity. Initially there is a large increase in pixel intensity as exposure time increases and this is most likely because as exposure time increases, more photons will be detected by the pixels in the camera. As exposure time continues to increase, the increase in pixel intensity starts to decrease. This is most likely because the pixels can only hold a certain amount of photons and when a pixel has stored its maximum amount of photons, it has reached its saturation point. As more photons are being detected by the pixels from the increasing exposure times, the pixels are getting closer to their saturation point <span class="citation" data-cites="hasinoff2021saturation"><a href="#ref-hasinoff2021saturation" role="doc-biblioref">[1]</a></span>. This plot also has a small error across the different trials, suggesting that the exposure times are precise.</p>
 <section id="read-and-plot-exposure-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-exposure-values">Read and Plot Exposure Values</h4>
-<div id="732e0650" class="cell" data-execution_count="1">
+<div id="c92b6ea9" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code from exposure_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -356,7 +362,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 <p>In both of the plots shown in Fig. 5.2, there is a positive trend between brightness level and pixel intensity. When the exposure time was set to 0.01 seconds (Fig. 5.2a), the pixel intensity increases linearly and then flattens out around 1023 arbitrary units. This number matches with the intensity when exposure time is 0.01 seconds in Fig. 5.1 above, suggesting that the exposure time has a significant impact on the resulting plot of brightness level vs pixel intensity. When the exposure time is increased to 0.1 seconds in Fig. 5.2b, the linear portion of the graph seems to shift to higher brightness levels and starts to flatten out around 1000 arbitrary units. This intensity value also agrees with the intensity value of an exposure time of 0.1 seconds in Fig. 5.1 above. The trend that this data supports is that the camera will most accurately capture LED brightness when the brightness level is low and the exposure time is quick and when the brightness level is high and the exposure time is slow. There is also a very small error across the different trials, suggesting that the camera is capturing the LED brightness precisely.</p>
 <section id="read-and-plot-brightness-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-brightness-values">Read and Plot Brightness Values</h4>
-<div id="47ae3eda" class="cell" data-execution_count="2">
+<div id="a65ab83e" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code from brightness_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -484,7 +490,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 <p>Both Fig. 5.3a and Fig. 5.3b depict a positive, non-linear relationship between brightness and wattage from the photodiode. Fig. 5.3a shows increasing brightness level from the NeoPixel controls while Figure 5.3b shows increasing tuple value, or color code value. The plots are extremely similar in both shape and in error. The error across the different trials are a lot larger than in Figuress 5.1 and 5.2. This is because the photodiode is measuring the actual LED output rather than what the camera is capturing the brightness to be. The LEDs being used are off the shelf and relatively cheap, so it was expected that they would be less precise than more expensive LED options.</p>
 <section id="read-and-plot-photodiode-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-photodiode-values">Read and Plot Photodiode Values</h4>
-<div id="9b991cc4" class="cell" data-execution_count="3">
+<div id="62d41de7" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -592,7 +598,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 <p>Fig. 5.5 shows the normalized pixel intensities of all ten concentrations of FITC for eight different exposure times. As exposure time and concentration increases, the pixel intensity also increases. The 100 milliseconds, or 0.1 seconds, exposure time best represents the expected relationship between concentration and pixel intensity (green curve). As seen in Fig. 5.6, the lower concentrations of FITC are a lot less fluorescent than the higher concentrations. The green curve in Fig. 5.5 shows a large increase in pixel intensity in the higher concentrations, with it flattening out at the maximum value of 1 in the normalized plot. This maximum value of 1 corresponds to 1023 arbitrary units. The slower exposure times (purple and blue curves) also show the trend to an extent. These larger exposure times mean that the images captured by the camera are super bright, so most of the concentrations have large intensity values. The faster exposure times have the opposite effect. The images captured by the camera are super dark, and the pixel intensity values are low. The intensity values for each concentration represent how fluorescent each concentration is. Based on this data, the higher concentrations of FITC are more fluorescent than the lower concentrations.</p>
 <section id="read-fitc-data-and-extract-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-fitc-data-and-extract-values">Read FITC Data and Extract Values</h4>
-<div id="f6ad2541" class="cell" data-execution_count="4">
+<div id="e4b78b31" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -682,7 +688,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 </section>
 <section id="plot-fitc-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="plot-fitc-data">Plot FITC Data</h4>
-<div id="686953ff" class="cell" data-execution_count="5">
+<div id="5fcb6ccf" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting</span></span>
@@ -734,7 +740,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 <p>Using the process described in Section 3.3.3, analysis on simulated speckle images and the effect of filtering was run. Fig. 5.7 depicts the simulated results for a filter with cutoff frequency of N/4, where N denotes the size of the speckle image in pixels, while Figures 5.8 and 5.9 show the results for cutoff frequency of N/8 and N/16, respectively.</p>
 <section id="create-a-simulated-speckle-image" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-simulated-speckle-image">Create a Simulated Speckle Image</h4>
-<div id="62c4ee17" class="cell" data-execution_count="6">
+<div id="ce915607" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -765,7 +771,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 </section>
 <section id="create-a-filter-and-apply-it-to-the-speckle-image" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-filter-and-apply-it-to-the-speckle-image">Create a filter and Apply it to the Speckle Image</h4>
-<div id="694da8c5" class="cell" data-execution_count="7">
+<div id="6666a8a7" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute amplitude, phase and intensity of the original speckle pattern</span></span>
@@ -799,7 +805,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 </section>
 <section id="compute-the-autocorrelation-and-speckle-size" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="compute-the-autocorrelation-and-speckle-size">Compute the Autocorrelation and Speckle Size</h4>
-<div id="0e588cd2" class="cell" data-execution_count="8">
+<div id="9d13ea41" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute autocorrelation of the original and filtered speckle patterns</span></span>
@@ -876,7 +882,7 @@ Filtered speckle size (width at half maximum): 1 pixels</code></pre>
 </section>
 <section id="create-plots" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-plots">Create plots</h4>
-<div id="aafbbeba" class="cell" data-execution_count="9">
+<div id="b45b48e1" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> add_colorbar(him, ax, cbar_title<span class="op">=</span><span class="st">""</span>):</span>
@@ -952,7 +958,7 @@ Figure&nbsp;5.2: The simulated and filtered speckle images.
 <p>The LSCI analysis script was run on images with a cream and water mixture running through the tube at flow rates of 0 ml/hr, 50 ml/hr, 100 ml/hr, 150 ml/hr, and 200 ml/hr. The resulting speckle images, LSCI reproductions and LSCI K values are shown in Fig. 5.10 and Table 5.1. While there is a general decreasing trend in the K values as flow rate decreases, there are discrepancies from value to value.</p>
 <section id="finding-the-moving-lsci-k-value" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-moving-lsci-k-value">Finding the moving LSCI K value</h4>
-<div id="7c8c1dc3" class="cell" data-execution_count="10">
+<div id="77a02163" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
@@ -1178,7 +1184,7 @@ Figure&nbsp;5.2: The simulated and filtered speckle images.
 </section>
 <section id="finding-the-lsci-reproduction-of-different-flowrates" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-lsci-reproduction-of-different-flowrates">Finding the LSCI Reproduction of Different Flowrates</h4>
-<div id="3934512e" class="cell" data-execution_count="11">
+<div id="d8102964" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>image_path1 <span class="op">=</span> <span class="st">'Data/0.001s/LSCI_0ml_0.001_1.bmp'</span></span>

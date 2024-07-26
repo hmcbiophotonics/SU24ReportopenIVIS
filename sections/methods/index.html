@@ -199,6 +199,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Acknowledgments</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sections/appendix/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Appendix</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -265,10 +271,15 @@ window.Quarto = {
 <h2 data-number="4.2" class="anchored" data-anchor-id="electrical-components-and-software"><span class="header-section-number">4.2</span> Electrical Components and Software</h2>
 <p>The OpenIVIS system runs primarily off of a Raspberry Pi 4, and other cheap, off-the-shelf electronics. The Raspberry Pi is a series of small single-board computers developed to be an educational tool, which has many interfacing options such as general purpose input/output pins (GPIO) that can connect to sensors. The camera used for all images in this project is an Arducam IMX519 color camera with a 24” flex cable, which is Raspberry Pi compatible and has autofocus features. A desktop and mouse are connected to the USB interfaces of the Raspberry Pi in order to use the system and make any necessary alterations. The system is stored on a 128 GB microSD card with the appropriate Raspberry Pi operating system.</p>
 <p>For most imaging methods used by the OpenIVIS system, an LED array of Adafruit Neopixel RGB LED modules is used to illuminate subjects under study. In order to connect to the Raspberry Pi, a Raspberry Pi prototyping board is wired along with a logic level converter and terminal block as shown in Fig. 4.4, as well as powered by an external 5V power supply. The LED array is connected to the pulse width modulated (PWM) pin from the Raspberry Pi to provide control. The LED’s are affixed to the 3D printed LED array as described in section 2.1. Unmounted, 25 mm thick long-pass optical glass filters were sourced from Thorlabs in cutoff wavelengths of 515 nm, 570 nm, 665 nm and 695 nm.</p>
-<p>LSCI and other laser based imaging techniques implement a red ThorLabs 635 nm Collimated Laser Diode Module, along with Thorlabs’ RA90, SM1TC, SM1D12D, GBE05-A, LDS5, TR3, TR6, CPS635R, SM1S10, SM1T1 and AD11F to properly configure the laser beam. The laser configuration as shown in Fig. 4.5a is affixed to the lid of the OpenIVIS box using a 3/8” 1/4-20 bolt, as shown in Fig. 4.5b.</p>
-<p>The majority of the code used to run the OpenIVIS system is written in the programming language Python, and available in the project’s public GitHub repository <span class="citation" data-cites="openIVIS2024"><a href="#ref-openIVIS2024" role="doc-biblioref">[1]</a></span>. Descriptions of the Python scripts necessary to collect and process data are described in the repository’s “Read Me” file. The list of necessary Python Packages is listed in Appendix 1, and is run on the Raspberry Pi through a virtual environment. The Neopixel LED array and Arducam camera Python libraries are also used and require installation. Additional data processing code was written using Mathworks’ MatLab software.</p>
-<p>A full list of materials, diagrams, and relevant code is available in Appendix 2, Appendix 3 and Appendix 4, respectively.</p>
-<p>Figs to make: LED wiring, Laser configuration, + Appendix BOM and any extra diagrams?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/LEDSchematic.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 4.4: Raspberry Pi Prototyping board schematic with the breakout board (a), header pins (b), logic level converter (c), DC audio jack (d), and 3 pin terminal block (e)</figcaption>
+</figure>
+</div>
+<p>LSCI and other laser based imaging techniques implement a red ThorLabs 635 nm Collimated Laser Diode Module, along with Thorlabs’ <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1985&amp;pn=RA90">RA90</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1533&amp;pn=SM1TC#5063">SM1TC</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1479&amp;pn=SM1D12D#5409">SM1D12D</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1580&amp;pn=GBE05-A">GBE05-A</a>, <a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=LDS5&amp;pn=LDS5">LDS5</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1266&amp;pn=TR3#237">TR3</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1266&amp;pn=TR3#237">TR6</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=1487&amp;pn=CPS635R#1620">CPS635R</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=3307&amp;pn=SM1S10#5039">SM1S10</a>, <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2704&amp;pn=SM1T1#1526">SM1T1</a> and <a href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=219&amp;pn=AD11F#367">AD11F</a> to properly configure the laser beam. The laser configuration as shown in Fig. 4.5a is affixed to the lid of the OpenIVIS box using a 3/8” 1/4-20 bolt, as shown in Fig. 4.5b.</p>
+<p>The majority of the code used to run the OpenIVIS system is written in the programming language Python, and available in the project’s public GitHub repository <span class="citation" data-cites="openIVIS2024"><a href="#ref-openIVIS2024" role="doc-biblioref">[1]</a></span>. Descriptions of the Python scripts necessary to collect and process data are described in the repository’s “Read Me” file. The list of necessary Python Packages is listed in Appendix 2, and is run on the Raspberry Pi through a virtual environment. The Neopixel LED array and Arducam camera Python libraries are also used and require installation. Additional data processing code was written using Mathworks’ MatLab software.</p>
+<p>A full list of materials, diagrams, and relevant CAD files is available in Appendix 1, Appendix 3 and Appendix 4, respectively.</p>
 </section>
 <section id="experiments" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="experiments"><span class="header-section-number">4.3</span> Experiments</h2>
