@@ -290,7 +290,7 @@ div.csl-indent {
 <p>In Fig. 5.1, there is a positive, non-linear relationship between exposure time and pixel intensity. Initially there is a large increase in pixel intensity as exposure time increases and this is most likely because as exposure time increases, more photons will be detected by the pixels in the camera. As exposure time continues to increase, the increase in pixel intensity starts to decrease. This is most likely because the pixels can only hold a certain amount of photons and when a pixel has stored its maximum amount of photons, it has reached its saturation point. As more photons are being detected by the pixels from the increasing exposure times, the pixels are getting closer to their saturation point <span class="citation" data-cites="hasinoff2021saturation"><a href="#ref-hasinoff2021saturation" role="doc-biblioref">[1]</a></span>. This plot also has a small error across the different trials, suggesting that the exposure times are precise.</p>
 <section id="read-and-plot-exposure-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-exposure-values">Read and Plot Exposure Values</h4>
-<div id="08f209e3" class="cell" data-execution_count="1">
+<div id="6888526d" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code from exposure_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -364,7 +364,7 @@ Figure&nbsp;5.1: The pixel intensity versus exposure time.
 <p>In both of the plots shown in Fig. 5.2, there is a positive trend between brightness level and pixel intensity. When the exposure time was set to 0.01 seconds (Fig. 5.2a), the pixel intensity increases linearly and then flattens out around 1023 arbitrary units. This number matches with the intensity when exposure time is 0.01 seconds in Fig. 5.1 above, suggesting that the exposure time has a significant impact on the resulting plot of brightness level vs pixel intensity. When the exposure time is increased to 0.1 seconds in Fig. 5.2b, the linear portion of the graph seems to shift to higher brightness levels and starts to flatten out around 1000 arbitrary units. This intensity value also agrees with the intensity value of an exposure time of 0.1 seconds in Fig. 5.1 above. The trend that this data supports is that the camera will most accurately capture LED brightness when the brightness level is low and the exposure time is quick and when the brightness level is high and the exposure time is slow. There is also a very small error across the different trials, suggesting that the camera is capturing the LED brightness precisely.</p>
 <section id="read-and-plot-brightness-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-brightness-values">Read and Plot Brightness Values</h4>
-<div id="e22823c5" class="cell" data-execution_count="2">
+<div id="3013e822" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code from brightness_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -501,7 +501,7 @@ Figure&nbsp;5.2
 <p>Both Fig. 5.3a and Fig. 5.3b depict a positive, non-linear relationship between brightness and wattage from the photodiode. Fig. 5.3a shows increasing brightness level from the NeoPixel controls while Figure 5.3b shows increasing tuple value, or color code value. The plots are extremely similar in both shape and in error. The error across the different trials are a lot larger than in Figuress 5.1 and 5.2. This is because the photodiode is measuring the actual LED output rather than what the camera is capturing the brightness to be. The LEDs being used are off the shelf and relatively cheap, so it was expected that they would be less precise than more expensive LED options.</p>
 <section id="read-and-plot-photodiode-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-and-plot-photodiode-values">Read and Plot Photodiode Values</h4>
-<div id="fcf5245c" class="cell" data-execution_count="3">
+<div id="9cec58e3" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -618,7 +618,7 @@ Figure&nbsp;5.3
 <p>Fig. 5.5 shows the normalized pixel intensities of all ten concentrations of FITC for eight different exposure times. As exposure time and concentration increases, the pixel intensity also increases. The 100 milliseconds, or 0.1 seconds, exposure time best represents the expected relationship between concentration and pixel intensity (green curve). As seen in Fig. 5.6, the lower concentrations of FITC are a lot less fluorescent than the higher concentrations. The green curve in Fig. 5.5 shows a large increase in pixel intensity in the higher concentrations, with it flattening out at the maximum value of 1 in the normalized plot. This maximum value of 1 corresponds to 1023 arbitrary units. The slower exposure times (purple and blue curves) also show the trend to an extent. These larger exposure times mean that the images captured by the camera are super bright, so most of the concentrations have large intensity values. The faster exposure times have the opposite effect. The images captured by the camera are super dark, and the pixel intensity values are low. The intensity values for each concentration represent how fluorescent each concentration is. Based on this data, the higher concentrations of FITC are more fluorescent than the lower concentrations.</p>
 <section id="read-fitc-data-and-extract-values" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="read-fitc-data-and-extract-values">Read FITC Data and Extract Values</h4>
-<div id="4fd9cb1b" class="cell" data-execution_count="4">
+<div id="2393fee5" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -708,7 +708,7 @@ Figure&nbsp;5.3
 </section>
 <section id="plot-fitc-data" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="plot-fitc-data">Plot FITC Data</h4>
-<div id="85a5b0d3" class="cell" data-execution_count="5">
+<div id="fd7c7823" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show code from FITC_analysis.py</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting</span></span>
@@ -768,7 +768,7 @@ Figure&nbsp;5.5: Fluorescent image of FITC concentrations in a well plate.
 <p>Using the process described in Section 4.3.3, analysis on simulated speckle images and the effect of filtering was run. Fig. 5.7 depicts the simulated results for a filter with cutoff frequency of N/4, where N denotes the size of the speckle image in pixels, while Figures 5.8 and 5.9 show the results for cutoff frequency of N/8 and N/16, respectively.</p>
 <section id="create-a-simulated-speckle-image" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-simulated-speckle-image">Create a Simulated Speckle Image</h4>
-<div id="8b251d84" class="cell" data-execution_count="6">
+<div id="39a4a853" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -799,7 +799,7 @@ Figure&nbsp;5.5: Fluorescent image of FITC concentrations in a well plate.
 </section>
 <section id="create-a-filter-and-apply-it-to-the-speckle-image-for-cutoff-frequency-n4-then-calculate-the-speckle-size" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="create-a-filter-and-apply-it-to-the-speckle-image-for-cutoff-frequency-n4-then-calculate-the-speckle-size">Create a filter and apply it to the speckle image for cutoff frequency = N/4, then calculate the speckle size</h4>
-<div id="353c39f1" class="cell" data-execution_count="7">
+<div id="4c47432f" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute amplitude, phase and intensity of the original speckle pattern</span></span>
@@ -959,7 +959,7 @@ Figure&nbsp;5.6: The simulated and filtered speckle images for cutoff frequency 
 </section>
 <section id="cutoff-frequency-n8" class="level4" data-number="5.3.1.1">
 <h4 data-number="5.3.1.1" class="anchored" data-anchor-id="cutoff-frequency-n8"><span class="header-section-number">5.3.1.1</span> Cutoff Frequency = N/8</h4>
-<div id="306bff9a" class="cell" data-execution_count="8">
+<div id="55570303" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -1142,7 +1142,7 @@ Figure&nbsp;5.7: The simulated and filtered speckle images for cutoff frequency 
 </section>
 <section id="cutoff-frequency-n16" class="level4" data-number="5.3.1.2">
 <h4 data-number="5.3.1.2" class="anchored" data-anchor-id="cutoff-frequency-n16"><span class="header-section-number">5.3.1.2</span> Cutoff Frequency = N/16</h4>
-<div id="102d93f4" class="cell" data-execution_count="9">
+<div id="84e3ec74" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show code from speckleSimulation.py</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the necessary Python packages</span></span>
@@ -1330,7 +1330,7 @@ Figure&nbsp;5.8: The simulated and filtered speckle images for cutoff frequency=
 <p>The LSCI analysis script was run on images with a cream and water mixture running through the tube at flow rates of 0 ml/hr, 50 ml/hr, 100 ml/hr, 150 ml/hr, and 200 ml/hr. The resulting speckle images, LSCI reproductions and LSCI K values are shown in Fig. 5.10 and Table 5.1. While there is a general decreasing trend in the K values as flow rate decreases, there are discrepancies from value to value.</p>
 <section id="finding-the-moving-lsci-k-value-for-a-0.001s-exposure-time" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-moving-lsci-k-value-for-a-0.001s-exposure-time">Finding the moving LSCI K value for a 0.001s exposure time</h4>
-<div id="9893d2de" class="cell" data-execution_count="10">
+<div id="9c048da9" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
@@ -1560,7 +1560,7 @@ Figure&nbsp;5.8: The simulated and filtered speckle images for cutoff frequency=
 </section>
 <section id="finding-the-lsci-reproduction-of-different-flowrates-for-a-0.001s-exposure-time" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-lsci-reproduction-of-different-flowrates-for-a-0.001s-exposure-time">Finding the LSCI Reproduction of Different Flowrates for a 0.001s exposure time</h4>
-<div id="7dc81ff3" class="cell" data-execution_count="11">
+<div id="8e326700" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>image_path1 <span class="op">=</span> <span class="st">'Data/0.001s/LSCI_0ml_0.001_1.bmp'</span></span>
@@ -1648,11 +1648,11 @@ Figure&nbsp;5.9: The real-world results for LSCI on a 150 ml/hr fluid for an exp
 </figcaption>
 </figure>
 </div>
-<p>One potential reason for this discrepancy is in the exposure time used to capture the speckle images. Fig. 5.11 and Table 5.2 show the same calculations run on an exposure time with a lower exposure time of 0.0008s instead of 0.001s. The resulting values and LSCI reproductions are very similar to the previous results, signifying that the error lies somewhere else in the experimental setup or analysis.</p>
+<p>One potential reason for this discrepancy is in the exposure time used to capture the speckle images. Fig. 5.11 and Table 5.2 show the same calculations run on an exposure time with a lower exposure time of 0.0008s instead of 0.001s. The resulting values and LSCI reproductions produce similiar issues, signifying that the error lies somewhere else in the experimental setup or analysis.</p>
 </section>
 <section id="finding-the-moving-lsci-k-value-for-a-0.0008s-exposure-time" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-moving-lsci-k-value-for-a-0.0008s-exposure-time">Finding the moving LSCI K value for a 0.0008s exposure time</h4>
-<div id="5689529d" class="cell" data-execution_count="12">
+<div id="18604b1b" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
@@ -1826,137 +1826,86 @@ Figure&nbsp;5.9: The real-world results for LSCI on a 150 ml/hr fluid for an exp
 <span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">"Flowrate [ml/hr]"</span>,<span class="st">"Exposure Time [s]"</span>, <span class="st">"Average K [a.u.]"</span>]</span>
 <span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/0p/yfplty7936b5k03mfjtc0k940000gn/T/ipykernel_25156/1434157556.py:96: RuntimeWarning: invalid value encountered in scalar divide
-  stat_con = np.std(static_window) / np.mean(static_window)</code></pre>
-</div>
-<section id="table-5.2-average-k-values-for-0.0008s-exposure-tim" class="level5 unnumbered cell-output cell-output-display cell-output-markdown">
-<h5 class="unnumbered anchored" data-anchor-id="table-5.2-average-k-values-for-0.0008s-exposure-tim">Table 5.2: Average K Values for 0.0008s Exposure Tim</h5>
-</section>
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="12">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th></th>
-<th style="text-align: left;">Flowrate [ml/hr]</th>
-<th style="text-align: right;">Exposure Time [s]</th>
-<th style="text-align: right;">Average K [a.u.]</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td style="text-align: left;">200ml</td>
-<td style="text-align: right;">0.0008</td>
-<td style="text-align: right;">4.36896</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td style="text-align: left;">150ml</td>
-<td style="text-align: right;">0.0008</td>
-<td style="text-align: right;">3.63824</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td style="text-align: left;">0ml</td>
-<td style="text-align: right;">0.0008</td>
-<td style="text-align: right;">14.3479</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td style="text-align: left;">50ml</td>
-<td style="text-align: right;">0.0008</td>
-<td style="text-align: right;">3.83741</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td style="text-align: left;">100ml</td>
-<td style="text-align: right;">0.0008</td>
-<td style="text-align: right;">3.86437</td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </section>
 <section id="finding-the-lsci-reproduction-of-different-flowrates-for-a-0.0008s-exposure-time" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="finding-the-lsci-reproduction-of-different-flowrates-for-a-0.0008s-exposure-time">Finding the LSCI Reproduction of Different Flowrates for a 0.0008s exposure time</h4>
-<div id="908a80de" class="cell" data-execution_count="13">
+<div id="dbd53d9b" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Show code from speckle_an.py</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>image_path1 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_0ml_0.0008_1.bmp'</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>image_path2 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_50ml_0.0008_1.bmp'</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>image_path3 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_100ml_0.0008_1.bmp'</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>image_path4 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_150ml_0.0008_1.bmp'</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>image_path5 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_200ml_0.0008_1.bmp'</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="dv">2150</span><span class="op">;</span> x2 <span class="op">=</span> <span class="dv">2600</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="dv">1200</span><span class="op">;</span> y2 <span class="op">=</span> <span class="dv">1600</span>  </span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Original Speckle Image</span></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> Image.<span class="bu">open</span>(image_path4).convert(<span class="st">'L'</span>)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>og_int <span class="op">=</span> np.asarray(original)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>og_int <span class="op">=</span> og_int[y1:y2, x1:x2]</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the speckle contrast</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>(cont1, contrast_array1) <span class="op">=</span> calcSpeckleContrast(image_path1)</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>(cont2, contrast_array2) <span class="op">=</span> calcSpeckleContrast(image_path2)</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>(cont3, contrast_array3) <span class="op">=</span> calcSpeckleContrast(image_path3)</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>(cont4, contrast_array4) <span class="op">=</span> calcSpeckleContrast(image_path4)</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>(cont5, contrast_array5) <span class="op">=</span> calcSpeckleContrast(image_path5)</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>im0 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">0</span>].imshow(og_int, cmap <span class="op">=</span> <span class="st">'gray'</span>, vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">255</span>)</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">"(a) Intensity of Laser Speckle for 150 ml/hr"</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>divider0 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">0</span>])</span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>cax0 <span class="op">=</span> divider0.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>cbar0 <span class="op">=</span> fig.colorbar(im0, cax<span class="op">=</span>cax0)</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>cbar0.set_label(<span class="st">'Intensity [a.u.]'</span>)</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>im1 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">1</span>].imshow(contrast_array1, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="ss">f'(b) Speckle Contrast of Laser Speckle for 0 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>divider1 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">1</span>])</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>cax1 <span class="op">=</span> divider1.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>cbar1 <span class="op">=</span> fig.colorbar(im1, cax<span class="op">=</span>cax1)</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>cbar1.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>im2 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">2</span>].imshow(contrast_array2, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].set_title(<span class="ss">f'(c) Speckle Contrast of Laser Speckle for 50 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>divider2 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">2</span>])</span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>cax2 <span class="op">=</span> divider2.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>cbar2 <span class="op">=</span> fig.colorbar(im2, cax<span class="op">=</span>cax2)</span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>cbar2.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>im3 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">0</span>].imshow(contrast_array3, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_title(<span class="ss">f'(d) Speckle Contrast of Laser Speckle for 100 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>divider3 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">0</span>])</span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>cax3 <span class="op">=</span> divider3.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>cbar3 <span class="op">=</span> fig.colorbar(im3, cax<span class="op">=</span>cax3)</span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>cbar3.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>im4 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">1</span>].imshow(contrast_array4, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].set_title(<span class="ss">f'(e) Speckle Contrast of Laser Speckle for 150 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>divider4 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">1</span>])</span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>cax4 <span class="op">=</span> divider4.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>cbar4 <span class="op">=</span> fig.colorbar(im4, cax<span class="op">=</span>cax4)</span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>cbar4.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>im5 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">2</span>].imshow(contrast_array5, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">2</span>].set_title(<span class="ss">f'(f) Speckle Contrast of Laser Speckle for 200 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>divider5 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">2</span>])</span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>cax5 <span class="op">=</span> divider5.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a>cbar5 <span class="op">=</span> fig.colorbar(im5, cax<span class="op">=</span>cax5)</span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>cbar5.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust layout</span></span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the plot</span></span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'images/LSCIReal2.png'</span>)</span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>image_path1 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_0ml_0.0008_1.bmp'</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>image_path2 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_50ml_0.0008_1.bmp'</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>image_path3 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_100ml_0.0008_1.bmp'</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>image_path4 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_150ml_0.0008_1.bmp'</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>image_path5 <span class="op">=</span> <span class="st">'Data/0.0008s/LSCI_200ml_0.0008_1.bmp'</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="dv">2150</span><span class="op">;</span> x2 <span class="op">=</span> <span class="dv">2600</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="dv">1200</span><span class="op">;</span> y2 <span class="op">=</span> <span class="dv">1600</span>  </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Original Speckle Image</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>original <span class="op">=</span> Image.<span class="bu">open</span>(image_path4).convert(<span class="st">'L'</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>og_int <span class="op">=</span> np.asarray(original)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>og_int <span class="op">=</span> og_int[y1:y2, x1:x2]</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the speckle contrast</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>(cont1, contrast_array1) <span class="op">=</span> calcSpeckleContrast(image_path1)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>(cont2, contrast_array2) <span class="op">=</span> calcSpeckleContrast(image_path2)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>(cont3, contrast_array3) <span class="op">=</span> calcSpeckleContrast(image_path3)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>(cont4, contrast_array4) <span class="op">=</span> calcSpeckleContrast(image_path4)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>(cont5, contrast_array5) <span class="op">=</span> calcSpeckleContrast(image_path5)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>im0 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">0</span>].imshow(og_int, cmap <span class="op">=</span> <span class="st">'gray'</span>, vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">255</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">"(a) Intensity of Laser Speckle for 150 ml/hr"</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>divider0 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>cax0 <span class="op">=</span> divider0.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>cbar0 <span class="op">=</span> fig.colorbar(im0, cax<span class="op">=</span>cax0)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>cbar0.set_label(<span class="st">'Intensity [a.u.]'</span>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>im1 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">1</span>].imshow(contrast_array1, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="ss">f'(b) Speckle Contrast of Laser Speckle for 0 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>divider1 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>cax1 <span class="op">=</span> divider1.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>cbar1 <span class="op">=</span> fig.colorbar(im1, cax<span class="op">=</span>cax1)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>cbar1.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>im2 <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">2</span>].imshow(contrast_array2, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].set_title(<span class="ss">f'(c) Speckle Contrast of Laser Speckle for 50 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>divider2 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">0</span>, <span class="dv">2</span>])</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>cax2 <span class="op">=</span> divider2.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>cbar2 <span class="op">=</span> fig.colorbar(im2, cax<span class="op">=</span>cax2)</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>cbar2.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>im3 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">0</span>].imshow(contrast_array3, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">0</span>].set_title(<span class="ss">f'(d) Speckle Contrast of Laser Speckle for 100 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>divider3 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">0</span>])</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>cax3 <span class="op">=</span> divider3.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>cbar3 <span class="op">=</span> fig.colorbar(im3, cax<span class="op">=</span>cax3)</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>cbar3.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>im4 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">1</span>].imshow(contrast_array4, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">1</span>].set_title(<span class="ss">f'(e) Speckle Contrast of Laser Speckle for 150 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>divider4 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>cax4 <span class="op">=</span> divider4.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>cbar4 <span class="op">=</span> fig.colorbar(im4, cax<span class="op">=</span>cax4)</span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>cbar4.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>im5 <span class="op">=</span> ax[<span class="dv">1</span>,<span class="dv">2</span>].imshow(contrast_array5, cmap <span class="op">=</span> <span class="st">"jet"</span>)</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">1</span>,<span class="dv">2</span>].set_title(<span class="ss">f'(f) Speckle Contrast of Laser Speckle for 200 ml/hr'</span>, fontsize <span class="op">=</span> <span class="dv">8</span>)</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>divider5 <span class="op">=</span> make_axes_locatable(ax[<span class="dv">1</span>,<span class="dv">2</span>])</span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>cax5 <span class="op">=</span> divider5.append_axes(<span class="st">"right"</span>, size<span class="op">=</span><span class="st">"5%"</span>, pad<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>cbar5 <span class="op">=</span> fig.colorbar(im5, cax<span class="op">=</span>cax5)</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>cbar5.set_label(<span class="st">'Speckle Contrast K [a.u.]'</span>)</span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust layout</span></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the plot</span></span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'images/LSCIReal2.png'</span>)</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div id="fig-test-data" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1970,13 +1919,13 @@ Figure&nbsp;5.10: The real-world results for LSCI on a 150 ml/hr fluid for a 0.0
 </figure>
 </div>
 <p>Another source of error might be the camera used to take the speckle images. The Arducam IMX519 camera is able to take high quality images with regular lighting conditions, but it is possible that it does not have the resolution and sensitivity needed for LSCI. A possible replacement for the Arducam camera is a <a href="https://www.raspberrypi.com/products/raspberry-pi-high-quality-camera/">Raspberry Pi High Quality (HQ) camera</a> which could be implemented with the same code as the Arducam camera. This has the potential to reach more conclusive results. Alternatively, an Industrial camera designed for taking speckle images may prove more effective, but not as cost effective as a Raspberry Pi camera.</p>
-<p>Lastly, better filtering or image processing may assist in more accurate LSCI computation. The python scripts used in this project implemented the scipy Python library’s gaussian filter to produce a filtered speckle image before calculating the LSCI. Gaussian filters are a widely used filter in image processing for smoothing and noise reduction. It uses a gaussian kernel to perform a weighted average of the neighboring pixels around a central pixel, where the standard deviation of the gaussian kernel signifies the level of smoothing. Altering the gaussian fit or using a spatial filter as discussed in Brier et. al’s paper <span class="citation" data-cites="matthias2013laser"><a href="#ref-matthias2013laser" role="doc-biblioref">[2]</a></span> may prove more effective for future LSCI applications in the OpenIVIS system.</p>
+<p>Lastly, better filtering or image processing may assist in more accurate LSCI computation. The python scripts used in this project implemented the scipy Python library’s gaussian filter to produce a filtered speckle image before calculating the LSCI. Gaussian filters are a widely used filter in image processing for smoothing and noise reduction. It uses a gaussian kernel to perform a weighted average of the neighboring pixels around a central pixel, where the standard deviation of the gaussian kernel signifies the level of smoothing. Altering the gaussian fit or using a spatial filter as discussed in Brier et. al’s paper <span class="citation" data-cites="matthias2013laser"><a href="#ref-matthias2013laser" role="doc-biblioref">[2]</a></span> may prove more effective for future LSCI applications in the OpenIVIS system. Additionally, the window in which the moving and static LSCI data is being taken from may be innacurate and require a different location.</p>
 </section>
 </section>
 </section>
 <section id="additional-capabilities" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="additional-capabilities"><span class="header-section-number">5.4</span> Additional Capabilities</h2>
-<p>The system was successful in taking time lapse images over an extended period of time and could be used for a broad range of biological imaging applications. The time lapse of the Tobacco Hornworm growth resulted in 45 images over the span of 9 days, with 5 hours between each image. An example of one week’s worth of growth is shown in Fig. 5.11, and an image of the full box on the first and last day is shown in Fig. 5.12.</p>
+<p>The system was successful in taking time lapse images over an extended period of time and could be used for a broad range of biological imaging applications. The time lapse of the Tobacco Hornworm growth resulted in 45 images over the span of 9 days, with 5 hours between each image. An example of one week’s worth of growth is shown in Fig. 5.11.</p>
 <div id="fig-test-data" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-test-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1988,100 +1937,100 @@ Figure&nbsp;5.11: A week’s worth of growth from one hornworm.
 </figure>
 </div>
 <p>The OpenIVIS system was able to take images of lettuce leaf decomposition over a three day period. The response imaged on the 1st day is shown in Fig. 12a and the 3rd day in Fig. 12b. The 3rd day shows a significantly NDIA response when compared to the first day, indicating a change in fluorescence output from the lettuce leaf. While the difference in response was imaged, due to limited documentation on how to conduct this experiment, the experimental process and calculations used may be incorrect. An accurate depiction of this trial is shown in the system’s previous publication by Branning et. al <span class="citation" data-cites="lee2024detection"><a href="#ref-lee2024detection" role="doc-biblioref">[3]</a></span>.</p>
-<div id="6ca0cbc7" class="cell" data-execution_count="14">
+<div id="731e4bf9" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Show code from anthComp.py</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_log_ratio_heatmap(log_ratio, save_path):</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to plot and save the color map of the Anthocyanin response.</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co">        log_ratio: A numpy array of the Anthocyanin response</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co">        save_path: A string with the desired file saving path</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co">        N/A</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the log ratio color map</span></span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    plt.imshow(log_ratio, cmap<span class="op">=</span><span class="st">'cool'</span>, interpolation<span class="op">=</span><span class="st">'nearest'</span>, vmin <span class="op">=</span> <span class="dv">0</span>, vmax <span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>    plt.colorbar(label<span class="op">=</span><span class="st">'NDIA'</span>)</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">' Ratio Heat Map'</span>)</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>    plt.axis(<span class="st">'off'</span>)</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save the log ratio color map</span></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    plt.savefig(save_path, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    plt.close()</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_image(image_path):</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to load an image as a numpy array.</span></span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="co">        image_path: A string with the file path for an image</span></span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="co">        image: The image loaded as grayscale</span></span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>    image <span class="op">=</span> cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)</span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> image <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"Could not load image from </span><span class="sc">{</span>image_path<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> image</span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_anth(red_excitation, green_excitation):</span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to compute the Anthocyanin response.</span></span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
-<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a><span class="co">        red_excitation: The loaded image with red excitation light</span></span>
-<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a><span class="co">        green_excitation: The loaded image with green excitation light</span></span>
-<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
-<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="co">        NDAI: Thenormalized difference Anthocyanin index</span></span>
-<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read the images as 64-bit numpy arrays</span></span>
-<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>    red <span class="op">=</span> np.float64(red_excitation)</span>
-<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>    green <span class="op">=</span> np.float64(green_excitation)</span>
-<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>    np.errstate(divide<span class="op">=</span><span class="st">'ignore'</span>, invalid<span class="op">=</span><span class="st">'ignore'</span>)                                     <span class="co"># Ignore the zero values in the arrays </span></span>
-<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>    red[np.isnan(red)] <span class="op">=</span> <span class="fl">0.0</span>                                                           <span class="co"># Replace Nan's with zeroes </span></span>
-<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>    green[np.isnan(green)] <span class="op">=</span> <span class="fl">0.0</span>                                                       <span class="co"># Replace Nan's with zeroes  </span></span>
-<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>    rgadd <span class="op">=</span> np.add(red,green)                                                          <span class="co"># Add the red and green images together </span></span>
-<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>    rgsub <span class="op">=</span> np.subtract(red,green)                                                     <span class="co"># Subtract the green channel from the red channel </span></span>
-<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>    red[red <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> <span class="fl">1e-6</span>                                                               <span class="co"># Replace zeroes with 1e-6 </span></span>
-<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>    green[green <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> <span class="fl">1e-6</span>                                                           <span class="co"># Replace zeroes with 1e-6 </span></span>
-<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>    NDAI <span class="op">=</span> np.log(np.divide(rgadd, rgsub))                                                     <span class="co"># Calculate the NDAI value</span></span>
-<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> NDAI</span>
-<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the red and green images for the 3rd day</span></span>
-<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>image1_path1 <span class="op">=</span> <span class="st">'images/day3Red_Red_1.000_0.100_5.000.png'</span>               <span class="co"># Replace if necessary</span></span>
-<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>image2_path1 <span class="op">=</span> <span class="st">'images/day3Green_Green_1.000_1.000_5.000.png'</span>         <span class="co"># Replace if necessary</span></span>
-<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>red_excitation1 <span class="op">=</span> load_image(image1_path1)</span>
-<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>green_excitation1 <span class="op">=</span> load_image(image2_path1)</span>
-<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the red and green images for the 1st day</span></span>
-<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>image1_path2 <span class="op">=</span> <span class="st">'images/CloseFilter4_Red_1.000_0.100_5.000.png'</span>     <span class="co"># Replace if necessary</span></span>
-<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>image2_path2 <span class="op">=</span> <span class="st">'images/CloseFilter7_Green_1.000_1.000_5.000.png'</span>   <span class="co"># Replace if necessary</span></span>
-<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>red_excitation2 <span class="op">=</span> cv2.imread(image1_path2)</span>
-<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>green_excitation2 <span class="op">=</span> cv2.imread(image2_path2)</span>
-<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the NDAI</span></span>
-<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>day1 <span class="op">=</span> compute_anth(red_excitation2, green_excitation2)</span>
-<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>day3 <span class="op">=</span> compute_anth(red_excitation1, green_excitation1)</span>
-<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>heatmap_path1 <span class="op">=</span> <span class="st">'images/log_ratio_Day1.png'</span></span>
-<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>heatmap_path2 <span class="op">=</span> <span class="st">'images/log_ratio_Day3.png'</span></span>
-<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>plot_log_ratio_heatmap(day1, save_path<span class="op">=</span>heatmap_path1)</span>
-<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>plot_log_ratio_heatmap(day3, save_path<span class="op">=</span>heatmap_path2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_log_ratio_heatmap(log_ratio, save_path):</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to plot and save the color map of the Anthocyanin response.</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">        log_ratio: A numpy array of the Anthocyanin response</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="co">        save_path: A string with the desired file saving path</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">        N/A</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the log ratio color map</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    plt.imshow(log_ratio, cmap<span class="op">=</span><span class="st">'cool'</span>, interpolation<span class="op">=</span><span class="st">'nearest'</span>, vmin <span class="op">=</span> <span class="dv">0</span>, vmax <span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    plt.colorbar(label<span class="op">=</span><span class="st">'NDIA'</span>)</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">' Ratio Heat Map'</span>)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    plt.axis(<span class="st">'off'</span>)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save the log ratio color map</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    plt.savefig(save_path, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">'tight'</span>)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    plt.close()</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_image(image_path):</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to load an image as a numpy array.</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="co">        image_path: A string with the file path for an image</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="co">        image: The image loaded as grayscale</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>    image <span class="op">=</span> cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> image <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"Could not load image from </span><span class="sc">{</span>image_path<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> image</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_anth(red_excitation, green_excitation):</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>    <span class="co">""" </span></span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="co">    Function to compute the Anthocyanin response.</span></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="co">    Arguments:</span></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="co">        red_excitation: The loaded image with red excitation light</span></span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="co">        green_excitation: The loaded image with green excitation light</span></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns: </span></span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="co">        NDAI: Thenormalized difference Anthocyanin index</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read the images as 64-bit numpy arrays</span></span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    red <span class="op">=</span> np.float64(red_excitation)</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    green <span class="op">=</span> np.float64(green_excitation)</span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>    np.errstate(divide<span class="op">=</span><span class="st">'ignore'</span>, invalid<span class="op">=</span><span class="st">'ignore'</span>)                                     <span class="co"># Ignore the zero values in the arrays </span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>    red[np.isnan(red)] <span class="op">=</span> <span class="fl">0.0</span>                                                           <span class="co"># Replace Nan's with zeroes </span></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>    green[np.isnan(green)] <span class="op">=</span> <span class="fl">0.0</span>                                                       <span class="co"># Replace Nan's with zeroes  </span></span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>    rgadd <span class="op">=</span> np.add(red,green)                                                          <span class="co"># Add the red and green images together </span></span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>    rgsub <span class="op">=</span> np.subtract(red,green)                                                     <span class="co"># Subtract the green channel from the red channel </span></span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>    red[red <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> <span class="fl">1e-6</span>                                                               <span class="co"># Replace zeroes with 1e-6 </span></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>    green[green <span class="op">==</span> <span class="dv">0</span>] <span class="op">=</span> <span class="fl">1e-6</span>                                                           <span class="co"># Replace zeroes with 1e-6 </span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>    NDAI <span class="op">=</span> np.log(np.divide(rgadd, rgsub))                                                     <span class="co"># Calculate the NDAI value</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> NDAI</span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the red and green images for the 3rd day</span></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a>image1_path1 <span class="op">=</span> <span class="st">'images/day3Red_Red_1.000_0.100_5.000.png'</span>               <span class="co"># Replace if necessary</span></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a>image2_path1 <span class="op">=</span> <span class="st">'images/day3Green_Green_1.000_1.000_5.000.png'</span>         <span class="co"># Replace if necessary</span></span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a>red_excitation1 <span class="op">=</span> load_image(image1_path1)</span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>green_excitation1 <span class="op">=</span> load_image(image2_path1)</span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the red and green images for the 1st day</span></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>image1_path2 <span class="op">=</span> <span class="st">'images/CloseFilter4_Red_1.000_0.100_5.000.png'</span>     <span class="co"># Replace if necessary</span></span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>image2_path2 <span class="op">=</span> <span class="st">'images/CloseFilter7_Green_1.000_1.000_5.000.png'</span>   <span class="co"># Replace if necessary</span></span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>red_excitation2 <span class="op">=</span> cv2.imread(image1_path2)</span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a>green_excitation2 <span class="op">=</span> cv2.imread(image2_path2)</span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the NDAI</span></span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a>day1 <span class="op">=</span> compute_anth(red_excitation2, green_excitation2)</span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a>day3 <span class="op">=</span> compute_anth(red_excitation1, green_excitation1)</span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>heatmap_path1 <span class="op">=</span> <span class="st">'images/log_ratio_Day1.png'</span></span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a>heatmap_path2 <span class="op">=</span> <span class="st">'images/log_ratio_Day3.png'</span></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>plot_log_ratio_heatmap(day1, save_path<span class="op">=</span>heatmap_path1)</span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a>plot_log_ratio_heatmap(day3, save_path<span class="op">=</span>heatmap_path2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div id="fig-test-data" class="quarto-float quarto-figure quarto-figure-center anchored">
