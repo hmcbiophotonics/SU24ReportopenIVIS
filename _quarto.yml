@@ -28,7 +28,7 @@ format:
     number-sections: true
     toc: true
     toc-depth: 4
-  pdf: default
+  #pdf: default
 
 bibliography: references.bib
 csl: ieee.csl

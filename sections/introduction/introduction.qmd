@@ -45,5 +45,3 @@ F_{fft}(f) &= \text{FFT}\{I(x,y)\} \quad \text{(Eq.2)} \\
 F_{cc}(f) &= F_{fft}(f) \times F_{fft}^{*}(f) \quad \text{(Eq.3)} \\
 F_{A}(t) &= \text{IFFT}\{F_{cc}(f)\} \quad \text{(Eq.4)}
 \end{align}
-
-

@@ -4,11 +4,13 @@ output-file: index
 header-includes:
   - \setcounter{page}{7}  
 ---
+The authors would like to thank the help of this project's principal investigator, Professor Joshua Brake at Harvey Mudd College, as well as the other members of the Harvey Mudd College Biophotonics Lab for their support throughout the summer. The authors would also like to thank the Colorado School of Mines Cash Lab, the Harvey Mudd College Engineering Department, Daniel A. Guerra, Jenny Nguyen, Xavier Walter, and Jacob Staimpel for their support and collaboration.
 
+Daniel A. Guerra - HMC Chemistry Laboratory and Stockroom Manager
+Jenny Nguyen - HMC Biology Laboratory Manager
+Xavier Walter - HMC Staff Engineer 
+Jacob Staimpel - HMC Engineering Instructional Support Coordinator
 
-This research was supported by the Silicon Valley Community Foundation under Grant No. 2022-251322. The authors would like to thank the Colorado School of Mines Cash Lab, Harvey Mudd College, Daniel A. Guerra, Jenny Nguyen, Xavier Walter, and Jacob Staimpel for their support and collaboration.
+## Funding Acknowledgement
 
-- Daniel A. Guerra - HMC Chemistry Laboratory and Stockroom Manager
-- Jenny Nguyen - HMC Biology Laboratory Manager
-- Xavier Walter - HMC Staff Engineer 
-- Jacob Staimpel - HMC Engineering Instructional Support Coordinator
+This research was supported by the Silicon Valley Community Foundation under Grant No. 2022-251322. 

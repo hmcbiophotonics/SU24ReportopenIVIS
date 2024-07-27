@@ -1255,13 +1255,15 @@ plt.close(fig)
 The real-world results for LSCI on a 150 ml/hr fluid for an exposure time of 0.001s.
 :::
 
-One potential reason for this discrepancy is in the exposure time used to capture the speckle images. Fig. 5.11 and Table 5.2 show the same calculations run on an exposure time with a lower exposure time of 0.0008s instead of 0.001s. The resulting values and LSCI reproductions are very similar to the previous results, signifying that the error lies somewhere else in the experimental setup or analysis.
+One potential reason for this discrepancy is in the exposure time used to capture the speckle images. Fig. 5.11 and Table 5.2 show the same calculations run on an exposure time with a lower exposure time of 0.0008s instead of 0.001s. The resulting values and LSCI reproductions produce similiar issues, signifying that the error lies somewhere else in the experimental setup or analysis.
 
 
 #### Finding the moving LSCI K value for a 0.0008s exposure time{.unnumbered}
 ```{python}
 #| code-fold: true
 #| code-summary: "Show code from speckle_an.py"
+#| output: false
+
 
 from PIL import Image
 import numpy as np
@@ -1522,14 +1524,13 @@ plt.close(fig)
 The real-world results for LSCI on a 150 ml/hr fluid for a 0.0008s exposure time.
 :::
 
-
 Another source of error might be the camera used to take the speckle images. The Arducam IMX519 camera is able to take high quality images with regular lighting conditions, but it is possible that it does not have the resolution and sensitivity needed for LSCI. A possible replacement for the Arducam camera is a [Raspberry Pi High Quality (HQ) camera](https://www.raspberrypi.com/products/raspberry-pi-high-quality-camera/) which could be implemented with the same code as the Arducam camera. This has the potential to reach more conclusive results. Alternatively, an Industrial camera designed for taking speckle images may prove more effective, but not as cost effective as a Raspberry Pi camera. 
 
-Lastly, better filtering or image processing may assist in more accurate LSCI computation. The python scripts used in this project implemented the scipy Python library’s gaussian filter to produce a filtered speckle image before calculating the LSCI. Gaussian filters are a widely used filter in image processing for smoothing and noise reduction. It uses a gaussian kernel to perform a weighted average of the neighboring pixels around a central pixel, where the standard deviation of the gaussian kernel signifies the level of smoothing. Altering the gaussian fit or using a spatial filter as discussed in Brier et. al’s paper @matthias2013laser may prove more effective for future LSCI applications in the OpenIVIS system.
+Lastly, better filtering or image processing may assist in more accurate LSCI computation. The python scripts used in this project implemented the scipy Python library’s gaussian filter to produce a filtered speckle image before calculating the LSCI. Gaussian filters are a widely used filter in image processing for smoothing and noise reduction. It uses a gaussian kernel to perform a weighted average of the neighboring pixels around a central pixel, where the standard deviation of the gaussian kernel signifies the level of smoothing. Altering the gaussian fit or using a spatial filter as discussed in Brier et. al’s paper @matthias2013laser may prove more effective for future LSCI applications in the OpenIVIS system. Additionally, the window in which the moving and static LSCI data is being taken from may be innacurate and require a different location.
 
 ## Additional Capabilities
 
-The system was successful in taking time lapse images over an extended period of time and could be used for a broad range of biological imaging applications. The time lapse of the Tobacco Hornworm growth resulted in 45 images over the span of 9 days, with 5 hours between each image. An example of one week’s worth of growth is shown in Fig. 5.11, and an image of the full box on the first and last day is shown in Fig. 5.12. 
+The system was successful in taking time lapse images over an extended period of time and could be used for a broad range of biological imaging applications. The time lapse of the Tobacco Hornworm growth resulted in 45 images over the span of 9 days, with 5 hours between each image. An example of one week’s worth of growth is shown in Fig. 5.11.
 
 ::: {#fig-test-data}
 ![](./images/TV%20Remote.png)
